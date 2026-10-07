@@ -1,10 +1,3 @@
-MOLTECH — SOBRE O PROJETO
-=========================
-
-Este texto estava na seção "Sobre" do site. Saiu de lá para o site ficar só
-com a tabela, os íons e as configurações. Use o que quiser dele no portfólio
-e no GitHub.
-
 
 O QUE É
 -------
