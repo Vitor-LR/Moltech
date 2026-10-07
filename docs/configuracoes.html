@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-titulo-en="Settings — Moltech">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configurações — Moltech</title>
+    <meta name="description" content="Moltech: tabela periódica interativa com os 118 elementos, modelo 3D do átomo, orbitais e íons. Projeto acadêmico em Go.">
+    
+    <script>(function () {
+        try {
+            var r = document.documentElement;
+            if (localStorage.getItem('moltech-idioma') === 'en') r.lang = 'en';
+            var c = (JSON.parse(localStorage.getItem('moltech-config') || '{}').cartao) || {};
+            if (c.cantos != null) r.style.setProperty('--cz-raio', c.cantos + '%');
+            if (c.borda != null) r.style.setProperty('--cz-borda', c.borda + 'px');
+            if (c.cor != null) r.style.setProperty('--cz-croma', c.cor / 100);
+            if (c.simbolo != null) r.style.setProperty('--cz-simbolo', c.simbolo / 100);
+            if (c.numero === false) r.dataset.semNumero = '';
+            if (c.nome === false) r.dataset.semNome = '';
+            if (c.massa === false) r.dataset.semMassa = '';
+        } catch (e) { }
+    })();</script>
+    <link rel="icon" type="image/svg+xml" href="static/img/favicon.svg?v=8fe1d311">
+    <link rel="preload" href="static/fonts/atkinson-next.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="static/css/style.css?v=8fe1d311">
+</head>
+<body data-pagina="config">
+
+<header class="topo">
+    <a class="marca" href="index.html" aria-label="Moltech — tabela periódica" data-en-aria-label="Moltech — periodic table">
+        
+        <svg class="orbital" viewBox="-32 -32 64 64" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="2.2">
+                <ellipse rx="28" ry="10.5"/>
+                <ellipse rx="28" ry="10.5" transform="rotate(60)"/>
+                <ellipse rx="28" ry="10.5" transform="rotate(120)"/>
+            </g>
+            <circle class="orbital-nucleo" r="5.2"/>
+            <g class="orbital-eletrons">
+                <circle r="3.3"><animateMotion dur="2.8s" repeatCount="indefinite" path="M-28,0a28,10.5 0 1,0 56,0a28,10.5 0 1,0 -56,0"/></circle>
+                <g transform="rotate(60)"><circle r="3.3"><animateMotion dur="3.6s" begin="-1.2s" repeatCount="indefinite" path="M-28,0a28,10.5 0 1,0 56,0a28,10.5 0 1,0 -56,0"/></circle></g>
+                <g transform="rotate(120)"><circle r="3.3"><animateMotion dur="4.4s" begin="-2.9s" repeatCount="indefinite" path="M-28,0a28,10.5 0 1,0 56,0a28,10.5 0 1,0 -56,0"/></circle></g>
+            </g>
+        </svg>
+        <span class="marca-nome">Moltech</span>
+    </a>
+
+    <nav class="pilula menu" aria-label="Páginas" data-en-aria-label="Pages">
+        <a href="index.html" ><span class="pt">Tabela</span><span class="en" lang="en">Table</span></a>
+        <a href="ions.html" ><span class="pt">Íons</span><span class="en" lang="en">Ions</span></a>
+        <a href="configuracoes.html" aria-current="page"><span class="longo"><span class="pt">Configurações</span><span class="en" lang="en">Settings</span></span><span class="curto" aria-hidden="true"><span class="pt">Ajustes</span><span class="en" lang="en">Settings</span></span></a>
+    </nav>
+
+    <div class="topo-acoes">
+        
+        <div class="busca" id="busca-caixa">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4.5 4.5"/></svg>
+            <input type="search" id="busca" placeholder="Buscar elemento" data-en-placeholder="Search element" autocomplete="off" spellcheck="false"
+                   aria-label="Buscar elemento por nome, símbolo ou número atômico" data-en-aria-label="Search element by name, symbol or atomic number" aria-controls="busca-resultados">
+            <ul class="busca-resultados" id="busca-resultados" hidden></ul>
+        </div>
+        <button class="botao-redondo" id="abrir-ajuda" type="button" aria-label="Ajuda: o que é cada parte desta página" data-en-aria-label="Help: what each part of this page is" title="Ajuda" data-en-title="Help">?</button>
+        
+        <button class="botao-redondo idioma" id="idioma" type="button" aria-label="Mudar idioma para inglês" data-en-aria-label="Switch language to Portuguese" title="Idioma: português" data-en-title="Language: English">
+            <span class="id-pt" aria-hidden="true">PT</span><span class="id-en" aria-hidden="true">EN</span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<section class="pagina pagina-estreita">
+    <div class="cabecalho">
+        <h1><span class="pt">Configurações</span><span class="en" lang="en">Settings</span></h1>
+        <p><span class="pt">As preferências ficam salvas neste navegador e valem para todas as páginas.</span><span class="en" lang="en">Preferences are saved in this browser and apply to every page.</span></p>
+    </div>
+
+    <div class="config-grade">
+        <article class="cartao">
+            <h2><span class="pt">Modelo do átomo</span><span class="en" lang="en">Atom model</span></h2>
+            <div class="opcao">
+                <div><strong><span class="pt">Aba inicial da ficha</span><span class="en" lang="en">Initial card tab</span></strong><span><span class="pt">O que aparece primeiro ao abrir um elemento.</span><span class="en" lang="en">What shows first when you open an element.</span></span></div>
+                <div class="pilula" data-config="aba">
+                    <button type="button" data-valor="estrutura"><span class="pt">Estrutura</span><span class="en" lang="en">Structure</span></button>
+                    <button type="button" data-valor="orbitais"><span class="pt">Orbitais</span><span class="en" lang="en">Orbitals</span></button>
+                    <button type="button" data-valor="ions"><span class="pt">Íons</span><span class="en" lang="en">Ions</span></button>
+                    <button type="button" data-valor="propriedades"><span class="pt">Propriedades</span><span class="en" lang="en">Properties</span></button>
+                </div>
+            </div>
+            <div class="opcao">
+                <div><strong><span class="pt">Velocidade dos elétrons</span><span class="en" lang="en">Electron speed</span></strong><span><span class="pt">Ritmo da animação do modelo 3D.</span><span class="en" lang="en">Pace of the 3D model animation.</span></span></div>
+                <label class="deslizante"><input type="range" min="0.2" max="2.5" step="0.1" data-config="velocidade"><output></output></label>
+            </div>
+            <div class="opcao">
+                <div><strong><span class="pt">Girar sozinho</span><span class="en" lang="en">Auto-rotate</span></strong><span><span class="pt">O modelo gira devagar enquanto ninguém o arrasta.</span><span class="en" lang="en">The model turns slowly while nobody is dragging it.</span></span></div>
+                <label class="chave"><input type="checkbox" data-config="girar"><i></i></label>
+            </div>
+        </article>
+
+        <article class="cartao">
+            <h2><span class="pt">Unidades</span><span class="en" lang="en">Units</span></h2>
+            <div class="opcao">
+                <div><strong><span class="pt">Temperatura</span><span class="en" lang="en">Temperature</span></strong><span><span class="pt">Pontos de fusão e de ebulição.</span><span class="en" lang="en">Melting and boiling points.</span></span></div>
+                <div class="pilula" data-config="temp">
+                    <button type="button" data-valor="C">°C</button>
+                    <button type="button" data-valor="F">°F</button>
+                    <button type="button" data-valor="K">K</button>
+                </div>
+            </div>
+            <div class="opcao">
+                <div><strong><span class="pt">Energia</span><span class="en" lang="en">Energy</span></strong><span><span class="pt">Energia de ionização e afinidade eletrônica.</span><span class="en" lang="en">Ionization energy and electron affinity.</span></span></div>
+                <div class="pilula" data-config="energia">
+                    <button type="button" data-valor="kJ">kJ/mol</button>
+                    <button type="button" data-valor="eV">eV</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="cartao cartao-largo">
+            <h2><span class="pt">Personalizar cartões dos elementos</span><span class="en" lang="en">Customize element cards</span></h2>
+            <div class="personalizar">
+                <div class="personalizar-previa">
+                    <span class="rotulo-previa"><span class="pt">Prévia em tempo real</span><span class="en" lang="en">Live preview</span></span>
+                    <div class="el el-previa" id="previa-cartao" data-cat="nao-metal"><span class="el-z">1</span><span class="el-s">H</span><span class="el-n">Hidrogênio</span><span class="el-m">1,008</span></div>
+                    
+                    <div class="pilula" id="previa-elemento" role="group" aria-label="Elemento da prévia" data-en-aria-label="Preview element">
+                        <button type="button" data-valor="H|1|Hidrogênio|Hydrogen|1.008|nao-metal" aria-pressed="true">H</button>
+                        <button type="button" data-valor="Fe|26|Ferro|Iron|55.84|transicao" aria-pressed="false">Fe</button>
+                        <button type="button" data-valor="Na|11|Sódio|Sodium|22.99|alcalino" aria-pressed="false">Na</button>
+                        <button type="button" data-valor="Og|118|Oganessônio|Oganesson|295.216|gas-nobre" aria-pressed="false">Og</button>
+                    </div>
+                </div>
+                <div class="personalizar-controles">
+                    <div class="opcao">
+                        <div><strong><span class="pt">Modelos prontos</span><span class="en" lang="en">Presets</span></strong></div>
+                        <div class="pilula" id="modelos">
+                            <button type="button" data-modelo="padrao"><span class="pt">Padrão</span><span class="en" lang="en">Default</span></button>
+                            <button type="button" data-modelo="minimo"><span class="pt">Minimalista</span><span class="en" lang="en">Minimal</span></button>
+                            <button type="button" data-modelo="detalhado"><span class="pt">Detalhado</span><span class="en" lang="en">Detailed</span></button>
+                        </div>
+                    </div>
+                    <div class="opcao"><div><strong><span class="pt">Número atômico</span><span class="en" lang="en">Atomic number</span></strong></div><label class="chave"><input type="checkbox" data-cartao="numero"><i></i></label></div>
+                    <div class="opcao"><div><strong><span class="pt">Nome</span><span class="en" lang="en">Name</span></strong></div><label class="chave"><input type="checkbox" data-cartao="nome"><i></i></label></div>
+                    <div class="opcao"><div><strong><span class="pt">Massa atômica</span><span class="en" lang="en">Atomic mass</span></strong></div><label class="chave"><input type="checkbox" data-cartao="massa"><i></i></label></div>
+                    <div class="opcao"><div><strong><span class="pt">Tamanho do símbolo</span><span class="en" lang="en">Symbol size</span></strong></div><label class="deslizante"><input type="range" min="70" max="130" step="5" data-cartao="simbolo" data-sufixo="%"><output></output></label></div>
+                    <div class="opcao"><div><strong><span class="pt">Cantos</span><span class="en" lang="en">Corners</span></strong></div><label class="deslizante"><input type="range" min="0" max="50" step="1" data-cartao="cantos" data-sufixo="%"><output></output></label></div>
+                    <div class="opcao"><div><strong><span class="pt">Borda</span><span class="en" lang="en">Border</span></strong></div><label class="deslizante"><input type="range" min="0" max="3" step="0.5" data-cartao="borda" data-sufixo="px"><output></output></label></div>
+                    <div class="opcao"><div><strong><span class="pt">Intensidade da cor</span><span class="en" lang="en">Color intensity</span></strong></div><label class="deslizante"><input type="range" min="0" max="220" step="5" data-cartao="cor" data-sufixo="%"><output></output></label></div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="config-rodape">
+        <button type="button" class="botao" id="redefinir"><span class="pt">Redefinir tudo</span><span class="en" lang="en">Reset everything</span></button>
+        <span class="nota" id="salvo" role="status"></span>
+    </div>
+</section>
+
+</main>
+
+
+<dialog class="ajuda" id="ajuda" aria-labelledby="ajuda-titulo">
+    <h2 id="ajuda-titulo"><span class="pt">O que é cada parte desta página</span><span class="en" lang="en">What each part of this page is</span></h2>
+    
+<ul class="ajuda-lista pt">
+<li><strong>Menu superior</strong> — troca entre a Tabela, os Íons e as Configurações.</li>
+<li><strong>PT / EN</strong> — troca o idioma de todo o site entre português e inglês.</li>
+<li><strong>Modelo do átomo</strong> — escolhe a aba que abre primeiro na ficha, a velocidade dos elétrons e se o modelo 3D gira sozinho.</li>
+<li><strong>Unidades</strong> — define como temperatura e energia aparecem na ficha e na tabela.</li>
+<li><strong>Personalizar cartões</strong> — muda a aparência das casas da tabela: o que mostrar, tamanho do símbolo, cantos, borda e intensidade da cor. A prévia à esquerda mostra o resultado na hora.</li>
+<li><strong>Modelos prontos</strong> — aplica um conjunto de ajustes de uma vez.</li>
+<li><strong>Redefinir tudo</strong> — volta todas as preferências ao padrão.</li>
+<li><strong>Salvamento</strong> — cada mudança é salva automaticamente neste navegador; nada é enviado a servidor.</li>
+</ul>
+<ul class="ajuda-lista en" lang="en">
+<li><strong>Top menu</strong> — switches between the Table, Ions and Settings.</li>
+<li><strong>PT / EN</strong> — switches the whole site between Portuguese and English.</li>
+<li><strong>Atom model</strong> — picks the tab that opens first in the card, the electron speed and whether the 3D model rotates by itself.</li>
+<li><strong>Units</strong> — sets how temperature and energy appear in the card and in the table.</li>
+<li><strong>Customize cards</strong> — changes how the table cells look: what to show, symbol size, corners, border and color intensity. The preview on the left shows the result right away.</li>
+<li><strong>Presets</strong> — applies a set of adjustments at once.</li>
+<li><strong>Reset everything</strong> — returns every preference to its default.</li>
+<li><strong>Saving</strong> — every change is saved automatically in this browser; nothing is sent to a server.</li>
+</ul>
+
+    <form method="dialog"><button class="botao botao-escuro"><span class="pt">Entendi</span><span class="en" lang="en">Got it</span></button></form>
+</dialog>
+
+<script type="application/json" id="indice">[{"s":"H","n":"Hidrogênio","e":"Hydrogen","z":1},{"s":"He","n":"Hélio","e":"Helium","z":2},{"s":"Li","n":"Lítio","e":"Lithium","z":3},{"s":"Be","n":"Berílio","e":"Beryllium","z":4},{"s":"B","n":"Boro","e":"Boron","z":5},{"s":"C","n":"Carbono","e":"Carbon","z":6},{"s":"N","n":"Nitrogênio","e":"Nitrogen","z":7},{"s":"O","n":"Oxigênio","e":"Oxygen","z":8},{"s":"F","n":"Flúor","e":"Fluorine","z":9},{"s":"Ne","n":"Neônio","e":"Neon","z":10},{"s":"Na","n":"Sódio","e":"Sodium","z":11},{"s":"Mg","n":"Magnésio","e":"Magnesium","z":12},{"s":"Al","n":"Alumínio","e":"Aluminum","z":13},{"s":"Si","n":"Silício","e":"Silicon","z":14},{"s":"P","n":"Fósforo","e":"Phosphorus","z":15},{"s":"S","n":"Enxofre","e":"Sulfur","z":16},{"s":"Cl","n":"Cloro","e":"Chlorine","z":17},{"s":"Ar","n":"Argônio","e":"Argon","z":18},{"s":"K","n":"Potássio","e":"Potassium","z":19},{"s":"Ca","n":"Cálcio","e":"Calcium","z":20},{"s":"Sc","n":"Escândio","e":"Scandium","z":21},{"s":"Ti","n":"Titânio","e":"Titanium","z":22},{"s":"V","n":"Vanádio","e":"Vanadium","z":23},{"s":"Cr","n":"Cromo","e":"Chromium","z":24},{"s":"Mn","n":"Manganês","e":"Manganese","z":25},{"s":"Fe","n":"Ferro","e":"Iron","z":26},{"s":"Co","n":"Cobalto","e":"Cobalt","z":27},{"s":"Ni","n":"Níquel","e":"Nickel","z":28},{"s":"Cu","n":"Cobre","e":"Copper","z":29},{"s":"Zn","n":"Zinco","e":"Zinc","z":30},{"s":"Ga","n":"Gálio","e":"Gallium","z":31},{"s":"Ge","n":"Germânio","e":"Germanium","z":32},{"s":"As","n":"Arsênio","e":"Arsenic","z":33},{"s":"Se","n":"Selênio","e":"Selenium","z":34},{"s":"Br","n":"Bromo","e":"Bromine","z":35},{"s":"Kr","n":"Criptônio","e":"Krypton","z":36},{"s":"Rb","n":"Rubídio","e":"Rubidium","z":37},{"s":"Sr","n":"Estrôncio","e":"Strontium","z":38},{"s":"Y","n":"Ítrio","e":"Yttrium","z":39},{"s":"Zr","n":"Zircônio","e":"Zirconium","z":40},{"s":"Nb","n":"Nióbio","e":"Niobium","z":41},{"s":"Mo","n":"Molibdênio","e":"Molybdenum","z":42},{"s":"Tc","n":"Tecnécio","e":"Technetium","z":43},{"s":"Ru","n":"Rutênio","e":"Ruthenium","z":44},{"s":"Rh","n":"Ródio","e":"Rhodium","z":45},{"s":"Pd","n":"Paládio","e":"Palladium","z":46},{"s":"Ag","n":"Prata","e":"Silver","z":47},{"s":"Cd","n":"Cádmio","e":"Cadmium","z":48},{"s":"In","n":"Índio","e":"Indium","z":49},{"s":"Sn","n":"Estanho","e":"Tin","z":50},{"s":"Sb","n":"Antimônio","e":"Antimony","z":51},{"s":"Te","n":"Telúrio","e":"Tellurium","z":52},{"s":"I","n":"Iodo","e":"Iodine","z":53},{"s":"Xe","n":"Xenônio","e":"Xenon","z":54},{"s":"Cs","n":"Césio","e":"Cesium","z":55},{"s":"Ba","n":"Bário","e":"Barium","z":56},{"s":"La","n":"Lantânio","e":"Lanthanum","z":57},{"s":"Ce","n":"Cério","e":"Cerium","z":58},{"s":"Pr","n":"Praseodímio","e":"Praseodymium","z":59},{"s":"Nd","n":"Neodímio","e":"Neodymium","z":60},{"s":"Pm","n":"Promécio","e":"Promethium","z":61},{"s":"Sm","n":"Samário","e":"Samarium","z":62},{"s":"Eu","n":"Európio","e":"Europium","z":63},{"s":"Gd","n":"Gadolínio","e":"Gadolinium","z":64},{"s":"Tb","n":"Térbio","e":"Terbium","z":65},{"s":"Dy","n":"Disprósio","e":"Dysprosium","z":66},{"s":"Ho","n":"Hólmio","e":"Holmium","z":67},{"s":"Er","n":"Érbio","e":"Erbium","z":68},{"s":"Tm","n":"Túlio","e":"Thulium","z":69},{"s":"Yb","n":"Itérbio","e":"Ytterbium","z":70},{"s":"Lu","n":"Lutécio","e":"Lutetium","z":71},{"s":"Hf","n":"Háfnio","e":"Hafnium","z":72},{"s":"Ta","n":"Tântalo","e":"Tantalum","z":73},{"s":"W","n":"Tungstênio","e":"Tungsten","z":74},{"s":"Re","n":"Rênio","e":"Rhenium","z":75},{"s":"Os","n":"Ósmio","e":"Osmium","z":76},{"s":"Ir","n":"Irídio","e":"Iridium","z":77},{"s":"Pt","n":"Platina","e":"Platinum","z":78},{"s":"Au","n":"Ouro","e":"Gold","z":79},{"s":"Hg","n":"Mercúrio","e":"Mercury","z":80},{"s":"Tl","n":"Tálio","e":"Thallium","z":81},{"s":"Pb","n":"Chumbo","e":"Lead","z":82},{"s":"Bi","n":"Bismuto","e":"Bismuth","z":83},{"s":"Po","n":"Polônio","e":"Polonium","z":84},{"s":"At","n":"Astato","e":"Astatine","z":85},{"s":"Rn","n":"Radônio","e":"Radon","z":86},{"s":"Fr","n":"Frâncio","e":"Francium","z":87},{"s":"Ra","n":"Rádio","e":"Radium","z":88},{"s":"Ac","n":"Actínio","e":"Actinium","z":89},{"s":"Th","n":"Tório","e":"Thorium","z":90},{"s":"Pa","n":"Protactínio","e":"Protactinium","z":91},{"s":"U","n":"Urânio","e":"Uranium","z":92},{"s":"Np","n":"Netúnio","e":"Neptunium","z":93},{"s":"Pu","n":"Plutônio","e":"Plutonium","z":94},{"s":"Am","n":"Amerício","e":"Americium","z":95},{"s":"Cm","n":"Cúrio","e":"Curium","z":96},{"s":"Bk","n":"Berquélio","e":"Berkelium","z":97},{"s":"Cf","n":"Califórnio","e":"Californium","z":98},{"s":"Es","n":"Einstênio","e":"Einsteinium","z":99},{"s":"Fm","n":"Férmio","e":"Fermium","z":100},{"s":"Md","n":"Mendelévio","e":"Mendelevium","z":101},{"s":"No","n":"Nobélio","e":"Nobelium","z":102},{"s":"Lr","n":"Laurêncio","e":"Lawrencium","z":103},{"s":"Rf","n":"Rutherfórdio","e":"Rutherfordium","z":104},{"s":"Db","n":"Dúbnio","e":"Dubnium","z":105},{"s":"Sg","n":"Seabórgio","e":"Seaborgium","z":106},{"s":"Bh","n":"Bóhrio","e":"Bohrium","z":107},{"s":"Hs","n":"Hássio","e":"Hassium","z":108},{"s":"Mt","n":"Meitnério","e":"Meitnerium","z":109},{"s":"Ds","n":"Darmstádtio","e":"Darmstadtium","z":110},{"s":"Rg","n":"Roentgênio","e":"Roentgenium","z":111},{"s":"Cn","n":"Copernício","e":"Copernicium","z":112},{"s":"Nh","n":"Nihônio","e":"Nihonium","z":113},{"s":"Fl","n":"Fleróvio","e":"Flerovium","z":114},{"s":"Mc","n":"Moscóvio","e":"Moscovium","z":115},{"s":"Lv","n":"Livermório","e":"Livermorium","z":116},{"s":"Ts","n":"Tenessino","e":"Tennessine","z":117},{"s":"Og","n":"Oganessônio","e":"Oganesson","z":118}]</script>
+<script src="static/js/base.js?v=8fe1d311" defer></script>
+<script src="static/js/config.js?v=8fe1d311" defer></script>
+</body>
+</html>
