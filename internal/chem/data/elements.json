@@ -1,0 +1,3061 @@
+[
+ {
+  "z": 1,
+  "simbolo": "H",
+  "nome": "Hidrogênio",
+  "nome_en": "Hydrogen",
+  "massa": 1.008,
+  "categoria": "nao-metal",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 2.2,
+  "raio_pm": 120,
+  "ionizacao_ev": 13.598,
+  "afinidade_ev": 0.754,
+  "oxidacao": [
+   1,
+   -1
+  ],
+  "fusao_k": 13.81,
+  "ebulicao_k": 20.28,
+  "densidade": 8.988e-05,
+  "ano": 1766,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon hidrogênio (próton)"
+   },
+   {
+    "carga": -1,
+    "nome": "Hidreto"
+   }
+  ]
+ },
+ {
+  "z": 2,
+  "simbolo": "He",
+  "nome": "Hélio",
+  "nome_en": "Helium",
+  "massa": 4.0026,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 140,
+  "ionizacao_ev": 24.587,
+  "afinidade_ev": null,
+  "oxidacao": [
+   0
+  ],
+  "fusao_k": 0.95,
+  "ebulicao_k": 4.22,
+  "densidade": 0.0001785,
+  "ano": 1868,
+  "ions": []
+ },
+ {
+  "z": 3,
+  "simbolo": "Li",
+  "nome": "Lítio",
+  "nome_en": "Lithium",
+  "massa": 7.0,
+  "categoria": "alcalino",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.98,
+  "raio_pm": 182,
+  "ionizacao_ev": 5.392,
+  "afinidade_ev": 0.618,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 453.65,
+  "ebulicao_k": 1615.0,
+  "densidade": 0.534,
+  "ano": 1817,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon lítio"
+   }
+  ]
+ },
+ {
+  "z": 4,
+  "simbolo": "Be",
+  "nome": "Berílio",
+  "nome_en": "Beryllium",
+  "massa": 9.012183,
+  "categoria": "alcalinoterroso",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.57,
+  "raio_pm": 153,
+  "ionizacao_ev": 9.323,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 1560.0,
+  "ebulicao_k": 2744.0,
+  "densidade": 1.85,
+  "ano": 1798,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon berílio"
+   }
+  ]
+ },
+ {
+  "z": 5,
+  "simbolo": "B",
+  "nome": "Boro",
+  "nome_en": "Boron",
+  "massa": 10.81,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.04,
+  "raio_pm": 192,
+  "ionizacao_ev": 8.298,
+  "afinidade_ev": 0.277,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 2348.0,
+  "ebulicao_k": 4273.0,
+  "densidade": 2.37,
+  "ano": 1808,
+  "ions": []
+ },
+ {
+  "z": 6,
+  "simbolo": "C",
+  "nome": "Carbono",
+  "nome_en": "Carbon",
+  "massa": 12.011,
+  "categoria": "nao-metal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.55,
+  "raio_pm": 170,
+  "ionizacao_ev": 11.26,
+  "afinidade_ev": 1.263,
+  "oxidacao": [
+   4,
+   2,
+   -4
+  ],
+  "fusao_k": 3823.0,
+  "ebulicao_k": 4098.0,
+  "densidade": 2.267,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": -4,
+    "nome": "Carbeto"
+   }
+  ]
+ },
+ {
+  "z": 7,
+  "simbolo": "N",
+  "nome": "Nitrogênio",
+  "nome_en": "Nitrogen",
+  "massa": 14.007,
+  "categoria": "nao-metal",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 3.04,
+  "raio_pm": 155,
+  "ionizacao_ev": 14.534,
+  "afinidade_ev": null,
+  "oxidacao": [
+   5,
+   4,
+   3,
+   2,
+   1,
+   -1,
+   -2,
+   -3
+  ],
+  "fusao_k": 63.15,
+  "ebulicao_k": 77.36,
+  "densidade": 0.0012506,
+  "ano": 1772,
+  "ions": [
+   {
+    "carga": -3,
+    "nome": "Nitreto"
+   }
+  ]
+ },
+ {
+  "z": 8,
+  "simbolo": "O",
+  "nome": "Oxigênio",
+  "nome_en": "Oxygen",
+  "massa": 15.999,
+  "categoria": "nao-metal",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 3.44,
+  "raio_pm": 152,
+  "ionizacao_ev": 13.618,
+  "afinidade_ev": 1.461,
+  "oxidacao": [
+   -2
+  ],
+  "fusao_k": 54.36,
+  "ebulicao_k": 90.2,
+  "densidade": 0.001429,
+  "ano": 1774,
+  "ions": [
+   {
+    "carga": -2,
+    "nome": "Óxido"
+   }
+  ]
+ },
+ {
+  "z": 9,
+  "simbolo": "F",
+  "nome": "Flúor",
+  "nome_en": "Fluorine",
+  "massa": 18.99840316,
+  "categoria": "halogenio",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 3.98,
+  "raio_pm": 135,
+  "ionizacao_ev": 17.423,
+  "afinidade_ev": 3.339,
+  "oxidacao": [
+   -1
+  ],
+  "fusao_k": 53.53,
+  "ebulicao_k": 85.03,
+  "densidade": 0.001696,
+  "ano": 1670,
+  "ions": [
+   {
+    "carga": -1,
+    "nome": "Fluoreto"
+   }
+  ]
+ },
+ {
+  "z": 10,
+  "simbolo": "Ne",
+  "nome": "Neônio",
+  "nome_en": "Neon",
+  "massa": 20.18,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 154,
+  "ionizacao_ev": 21.565,
+  "afinidade_ev": null,
+  "oxidacao": [
+   0
+  ],
+  "fusao_k": 24.56,
+  "ebulicao_k": 27.07,
+  "densidade": 0.0008999,
+  "ano": 1898,
+  "ions": []
+ },
+ {
+  "z": 11,
+  "simbolo": "Na",
+  "nome": "Sódio",
+  "nome_en": "Sodium",
+  "massa": 22.9897693,
+  "categoria": "alcalino",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.93,
+  "raio_pm": 227,
+  "ionizacao_ev": 5.139,
+  "afinidade_ev": 0.548,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 370.95,
+  "ebulicao_k": 1156.0,
+  "densidade": 0.97,
+  "ano": 1807,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon sódio"
+   }
+  ]
+ },
+ {
+  "z": 12,
+  "simbolo": "Mg",
+  "nome": "Magnésio",
+  "nome_en": "Magnesium",
+  "massa": 24.305,
+  "categoria": "alcalinoterroso",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.31,
+  "raio_pm": 173,
+  "ionizacao_ev": 7.646,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 923.0,
+  "ebulicao_k": 1363.0,
+  "densidade": 1.74,
+  "ano": 1808,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon magnésio"
+   }
+  ]
+ },
+ {
+  "z": 13,
+  "simbolo": "Al",
+  "nome": "Alumínio",
+  "nome_en": "Aluminum",
+  "massa": 26.981538,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.61,
+  "raio_pm": 184,
+  "ionizacao_ev": 5.986,
+  "afinidade_ev": 0.441,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 933.437,
+  "ebulicao_k": 2792.0,
+  "densidade": 2.7,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon alumínio"
+   }
+  ]
+ },
+ {
+  "z": 14,
+  "simbolo": "Si",
+  "nome": "Silício",
+  "nome_en": "Silicon",
+  "massa": 28.085,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.9,
+  "raio_pm": 210,
+  "ionizacao_ev": 8.152,
+  "afinidade_ev": 1.385,
+  "oxidacao": [
+   4,
+   2,
+   -4
+  ],
+  "fusao_k": 1687.0,
+  "ebulicao_k": 3538.0,
+  "densidade": 2.3296,
+  "ano": 1854,
+  "ions": []
+ },
+ {
+  "z": 15,
+  "simbolo": "P",
+  "nome": "Fósforo",
+  "nome_en": "Phosphorus",
+  "massa": 30.973762,
+  "categoria": "nao-metal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.19,
+  "raio_pm": 180,
+  "ionizacao_ev": 10.487,
+  "afinidade_ev": 0.746,
+  "oxidacao": [
+   5,
+   3,
+   -3
+  ],
+  "fusao_k": 317.3,
+  "ebulicao_k": 553.65,
+  "densidade": 1.82,
+  "ano": 1669,
+  "ions": [
+   {
+    "carga": -3,
+    "nome": "Fosfeto"
+   }
+  ]
+ },
+ {
+  "z": 16,
+  "simbolo": "S",
+  "nome": "Enxofre",
+  "nome_en": "Sulfur",
+  "massa": 32.07,
+  "categoria": "nao-metal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.58,
+  "raio_pm": 180,
+  "ionizacao_ev": 10.36,
+  "afinidade_ev": 2.077,
+  "oxidacao": [
+   6,
+   4,
+   -2
+  ],
+  "fusao_k": 388.36,
+  "ebulicao_k": 717.75,
+  "densidade": 2.067,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": -2,
+    "nome": "Sulfeto"
+   }
+  ]
+ },
+ {
+  "z": 17,
+  "simbolo": "Cl",
+  "nome": "Cloro",
+  "nome_en": "Chlorine",
+  "massa": 35.45,
+  "categoria": "halogenio",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 3.16,
+  "raio_pm": 175,
+  "ionizacao_ev": 12.968,
+  "afinidade_ev": 3.617,
+  "oxidacao": [
+   7,
+   5,
+   1,
+   -1
+  ],
+  "fusao_k": 171.65,
+  "ebulicao_k": 239.11,
+  "densidade": 0.003214,
+  "ano": 1774,
+  "ions": [
+   {
+    "carga": -1,
+    "nome": "Cloreto"
+   }
+  ]
+ },
+ {
+  "z": 18,
+  "simbolo": "Ar",
+  "nome": "Argônio",
+  "nome_en": "Argon",
+  "massa": 39.9,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 188,
+  "ionizacao_ev": 15.76,
+  "afinidade_ev": null,
+  "oxidacao": [
+   0
+  ],
+  "fusao_k": 83.8,
+  "ebulicao_k": 87.3,
+  "densidade": 0.0017837,
+  "ano": 1894,
+  "ions": []
+ },
+ {
+  "z": 19,
+  "simbolo": "K",
+  "nome": "Potássio",
+  "nome_en": "Potassium",
+  "massa": 39.0983,
+  "categoria": "alcalino",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.82,
+  "raio_pm": 275,
+  "ionizacao_ev": 4.341,
+  "afinidade_ev": 0.501,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 336.53,
+  "ebulicao_k": 1032.0,
+  "densidade": 0.89,
+  "ano": 1807,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon potássio"
+   }
+  ]
+ },
+ {
+  "z": 20,
+  "simbolo": "Ca",
+  "nome": "Cálcio",
+  "nome_en": "Calcium",
+  "massa": 40.08,
+  "categoria": "alcalinoterroso",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.0,
+  "raio_pm": 231,
+  "ionizacao_ev": 6.113,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 1115.0,
+  "ebulicao_k": 1757.0,
+  "densidade": 1.54,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon cálcio"
+   }
+  ]
+ },
+ {
+  "z": 21,
+  "simbolo": "Sc",
+  "nome": "Escândio",
+  "nome_en": "Scandium",
+  "massa": 44.95591,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.36,
+  "raio_pm": 211,
+  "ionizacao_ev": 6.561,
+  "afinidade_ev": 0.188,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1814.0,
+  "ebulicao_k": 3109.0,
+  "densidade": 2.99,
+  "ano": 1879,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon escândio"
+   }
+  ]
+ },
+ {
+  "z": 22,
+  "simbolo": "Ti",
+  "nome": "Titânio",
+  "nome_en": "Titanium",
+  "massa": 47.867,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.54,
+  "raio_pm": 187,
+  "ionizacao_ev": 6.828,
+  "afinidade_ev": 0.079,
+  "oxidacao": [
+   4,
+   3,
+   2
+  ],
+  "fusao_k": 1941.0,
+  "ebulicao_k": 3560.0,
+  "densidade": 4.5,
+  "ano": 1791,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon titânio(III)"
+   },
+   {
+    "carga": 4,
+    "nome": "Íon titânio(IV)"
+   }
+  ]
+ },
+ {
+  "z": 23,
+  "simbolo": "V",
+  "nome": "Vanádio",
+  "nome_en": "Vanadium",
+  "massa": 50.9415,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.63,
+  "raio_pm": 179,
+  "ionizacao_ev": 6.746,
+  "afinidade_ev": 0.525,
+  "oxidacao": [
+   5,
+   4,
+   3,
+   2
+  ],
+  "fusao_k": 2183.0,
+  "ebulicao_k": 3680.0,
+  "densidade": 6.0,
+  "ano": 1801,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon vanádio(II)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon vanádio(III)"
+   }
+  ]
+ },
+ {
+  "z": 24,
+  "simbolo": "Cr",
+  "nome": "Cromo",
+  "nome_en": "Chromium",
+  "massa": 51.996,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.66,
+  "raio_pm": 189,
+  "ionizacao_ev": 6.767,
+  "afinidade_ev": 0.666,
+  "oxidacao": [
+   6,
+   3,
+   2
+  ],
+  "fusao_k": 2180.0,
+  "ebulicao_k": 2944.0,
+  "densidade": 7.15,
+  "ano": 1797,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon cromo(II)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon cromo(III)"
+   }
+  ]
+ },
+ {
+  "z": 25,
+  "simbolo": "Mn",
+  "nome": "Manganês",
+  "nome_en": "Manganese",
+  "massa": 54.93804,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.55,
+  "raio_pm": 197,
+  "ionizacao_ev": 7.434,
+  "afinidade_ev": null,
+  "oxidacao": [
+   7,
+   4,
+   3,
+   2
+  ],
+  "fusao_k": 1519.0,
+  "ebulicao_k": 2334.0,
+  "densidade": 7.3,
+  "ano": 1774,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon manganês(II)"
+   },
+   {
+    "carga": 4,
+    "nome": "Íon manganês(IV)"
+   }
+  ]
+ },
+ {
+  "z": 26,
+  "simbolo": "Fe",
+  "nome": "Ferro",
+  "nome_en": "Iron",
+  "massa": 55.84,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.83,
+  "raio_pm": 194,
+  "ionizacao_ev": 7.902,
+  "afinidade_ev": 0.163,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1811.0,
+  "ebulicao_k": 3134.0,
+  "densidade": 7.874,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon ferro(II)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon ferro(III)"
+   }
+  ]
+ },
+ {
+  "z": 27,
+  "simbolo": "Co",
+  "nome": "Cobalto",
+  "nome_en": "Cobalt",
+  "massa": 58.93319,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.88,
+  "raio_pm": 192,
+  "ionizacao_ev": 7.881,
+  "afinidade_ev": 0.661,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1768.0,
+  "ebulicao_k": 3200.0,
+  "densidade": 8.86,
+  "ano": 1735,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon cobalto(II)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon cobalto(III)"
+   }
+  ]
+ },
+ {
+  "z": 28,
+  "simbolo": "Ni",
+  "nome": "Níquel",
+  "nome_en": "Nickel",
+  "massa": 58.693,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.91,
+  "raio_pm": 163,
+  "ionizacao_ev": 7.64,
+  "afinidade_ev": 1.156,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1728.0,
+  "ebulicao_k": 3186.0,
+  "densidade": 8.912,
+  "ano": 1751,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon níquel(II)"
+   }
+  ]
+ },
+ {
+  "z": 29,
+  "simbolo": "Cu",
+  "nome": "Cobre",
+  "nome_en": "Copper",
+  "massa": 63.55,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.9,
+  "raio_pm": 140,
+  "ionizacao_ev": 7.726,
+  "afinidade_ev": 1.228,
+  "oxidacao": [
+   2,
+   1
+  ],
+  "fusao_k": 1357.77,
+  "ebulicao_k": 2835.0,
+  "densidade": 8.933,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon cobre(I)"
+   },
+   {
+    "carga": 2,
+    "nome": "Íon cobre(II)"
+   }
+  ]
+ },
+ {
+  "z": 30,
+  "simbolo": "Zn",
+  "nome": "Zinco",
+  "nome_en": "Zinc",
+  "massa": 65.4,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.65,
+  "raio_pm": 139,
+  "ionizacao_ev": 9.394,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 692.68,
+  "ebulicao_k": 1180.0,
+  "densidade": 7.134,
+  "ano": 1746,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon zinco"
+   }
+  ]
+ },
+ {
+  "z": 31,
+  "simbolo": "Ga",
+  "nome": "Gálio",
+  "nome_en": "Gallium",
+  "massa": 69.723,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.81,
+  "raio_pm": 187,
+  "ionizacao_ev": 5.999,
+  "afinidade_ev": 0.3,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 302.91,
+  "ebulicao_k": 2477.0,
+  "densidade": 5.91,
+  "ano": 1875,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon gálio"
+   }
+  ]
+ },
+ {
+  "z": 32,
+  "simbolo": "Ge",
+  "nome": "Germânio",
+  "nome_en": "Germanium",
+  "massa": 72.63,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.01,
+  "raio_pm": 211,
+  "ionizacao_ev": 7.9,
+  "afinidade_ev": 1.35,
+  "oxidacao": [
+   4,
+   2
+  ],
+  "fusao_k": 1211.4,
+  "ebulicao_k": 3106.0,
+  "densidade": 5.323,
+  "ano": 1886,
+  "ions": []
+ },
+ {
+  "z": 33,
+  "simbolo": "As",
+  "nome": "Arsênio",
+  "nome_en": "Arsenic",
+  "massa": 74.92159,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.18,
+  "raio_pm": 185,
+  "ionizacao_ev": 9.815,
+  "afinidade_ev": 0.81,
+  "oxidacao": [
+   5,
+   3,
+   -3
+  ],
+  "fusao_k": 1090.0,
+  "ebulicao_k": 887.0,
+  "densidade": 5.776,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": -3,
+    "nome": "Arseneto"
+   }
+  ]
+ },
+ {
+  "z": 34,
+  "simbolo": "Se",
+  "nome": "Selênio",
+  "nome_en": "Selenium",
+  "massa": 78.97,
+  "categoria": "nao-metal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.55,
+  "raio_pm": 190,
+  "ionizacao_ev": 9.752,
+  "afinidade_ev": 2.021,
+  "oxidacao": [
+   6,
+   4,
+   -2
+  ],
+  "fusao_k": 493.65,
+  "ebulicao_k": 958.0,
+  "densidade": 4.809,
+  "ano": 1817,
+  "ions": [
+   {
+    "carga": -2,
+    "nome": "Seleneto"
+   }
+  ]
+ },
+ {
+  "z": 35,
+  "simbolo": "Br",
+  "nome": "Bromo",
+  "nome_en": "Bromine",
+  "massa": 79.9,
+  "categoria": "halogenio",
+  "estado": "liquido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.96,
+  "raio_pm": 183,
+  "ionizacao_ev": 11.814,
+  "afinidade_ev": 3.365,
+  "oxidacao": [
+   5,
+   1,
+   -1
+  ],
+  "fusao_k": 265.95,
+  "ebulicao_k": 331.95,
+  "densidade": 3.11,
+  "ano": 1826,
+  "ions": [
+   {
+    "carga": -1,
+    "nome": "Brometo"
+   }
+  ]
+ },
+ {
+  "z": 36,
+  "simbolo": "Kr",
+  "nome": "Criptônio",
+  "nome_en": "Krypton",
+  "massa": 83.8,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 3.0,
+  "raio_pm": 202,
+  "ionizacao_ev": 14.0,
+  "afinidade_ev": null,
+  "oxidacao": [
+   0
+  ],
+  "fusao_k": 115.79,
+  "ebulicao_k": 119.93,
+  "densidade": 0.003733,
+  "ano": 1898,
+  "ions": []
+ },
+ {
+  "z": 37,
+  "simbolo": "Rb",
+  "nome": "Rubídio",
+  "nome_en": "Rubidium",
+  "massa": 85.468,
+  "categoria": "alcalino",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.82,
+  "raio_pm": 303,
+  "ionizacao_ev": 4.177,
+  "afinidade_ev": 0.468,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 312.46,
+  "ebulicao_k": 961.0,
+  "densidade": 1.53,
+  "ano": 1861,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon rubídio"
+   }
+  ]
+ },
+ {
+  "z": 38,
+  "simbolo": "Sr",
+  "nome": "Estrôncio",
+  "nome_en": "Strontium",
+  "massa": 87.62,
+  "categoria": "alcalinoterroso",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.95,
+  "raio_pm": 249,
+  "ionizacao_ev": 5.695,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 1050.0,
+  "ebulicao_k": 1655.0,
+  "densidade": 2.64,
+  "ano": 1790,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon estrôncio"
+   }
+  ]
+ },
+ {
+  "z": 39,
+  "simbolo": "Y",
+  "nome": "Ítrio",
+  "nome_en": "Yttrium",
+  "massa": 88.90584,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.22,
+  "raio_pm": 219,
+  "ionizacao_ev": 6.217,
+  "afinidade_ev": 0.307,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1795.0,
+  "ebulicao_k": 3618.0,
+  "densidade": 4.47,
+  "ano": 1794,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon ítrio"
+   }
+  ]
+ },
+ {
+  "z": 40,
+  "simbolo": "Zr",
+  "nome": "Zircônio",
+  "nome_en": "Zirconium",
+  "massa": 91.22,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.33,
+  "raio_pm": 186,
+  "ionizacao_ev": 6.634,
+  "afinidade_ev": 0.426,
+  "oxidacao": [
+   4
+  ],
+  "fusao_k": 2128.0,
+  "ebulicao_k": 4682.0,
+  "densidade": 6.52,
+  "ano": 1789,
+  "ions": [
+   {
+    "carga": 4,
+    "nome": "Íon zircônio"
+   }
+  ]
+ },
+ {
+  "z": 41,
+  "simbolo": "Nb",
+  "nome": "Nióbio",
+  "nome_en": "Niobium",
+  "massa": 92.90637,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.6,
+  "raio_pm": 207,
+  "ionizacao_ev": 6.759,
+  "afinidade_ev": 0.893,
+  "oxidacao": [
+   5,
+   3
+  ],
+  "fusao_k": 2750.0,
+  "ebulicao_k": 5017.0,
+  "densidade": 8.57,
+  "ano": 1801,
+  "ions": []
+ },
+ {
+  "z": 42,
+  "simbolo": "Mo",
+  "nome": "Molibdênio",
+  "nome_en": "Molybdenum",
+  "massa": 95.95,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.16,
+  "raio_pm": 209,
+  "ionizacao_ev": 7.092,
+  "afinidade_ev": 0.746,
+  "oxidacao": [
+   6
+  ],
+  "fusao_k": 2896.0,
+  "ebulicao_k": 4912.0,
+  "densidade": 10.2,
+  "ano": 1778,
+  "ions": []
+ },
+ {
+  "z": 43,
+  "simbolo": "Tc",
+  "nome": "Tecnécio",
+  "nome_en": "Technetium",
+  "massa": 96.90636,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.9,
+  "raio_pm": 209,
+  "ionizacao_ev": 7.28,
+  "afinidade_ev": 0.55,
+  "oxidacao": [
+   7,
+   6,
+   4
+  ],
+  "fusao_k": 2430.0,
+  "ebulicao_k": 4538.0,
+  "densidade": 11.0,
+  "ano": 1937,
+  "ions": []
+ },
+ {
+  "z": 44,
+  "simbolo": "Ru",
+  "nome": "Rutênio",
+  "nome_en": "Ruthenium",
+  "massa": 101.1,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.2,
+  "raio_pm": 207,
+  "ionizacao_ev": 7.361,
+  "afinidade_ev": 1.05,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 2607.0,
+  "ebulicao_k": 4423.0,
+  "densidade": 12.1,
+  "ano": 1827,
+  "ions": []
+ },
+ {
+  "z": 45,
+  "simbolo": "Rh",
+  "nome": "Ródio",
+  "nome_en": "Rhodium",
+  "massa": 102.9055,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.28,
+  "raio_pm": 195,
+  "ionizacao_ev": 7.459,
+  "afinidade_ev": 1.137,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 2237.0,
+  "ebulicao_k": 3968.0,
+  "densidade": 12.4,
+  "ano": 1803,
+  "ions": []
+ },
+ {
+  "z": 46,
+  "simbolo": "Pd",
+  "nome": "Paládio",
+  "nome_en": "Palladium",
+  "massa": 106.42,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.2,
+  "raio_pm": 202,
+  "ionizacao_ev": 8.337,
+  "afinidade_ev": 0.557,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1828.05,
+  "ebulicao_k": 3236.0,
+  "densidade": 12.0,
+  "ano": 1803,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon paládio(II)"
+   }
+  ]
+ },
+ {
+  "z": 47,
+  "simbolo": "Ag",
+  "nome": "Prata",
+  "nome_en": "Silver",
+  "massa": 107.868,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.93,
+  "raio_pm": 172,
+  "ionizacao_ev": 7.576,
+  "afinidade_ev": 1.302,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 1234.93,
+  "ebulicao_k": 2435.0,
+  "densidade": 10.501,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon prata"
+   }
+  ]
+ },
+ {
+  "z": 48,
+  "simbolo": "Cd",
+  "nome": "Cádmio",
+  "nome_en": "Cadmium",
+  "massa": 112.41,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.69,
+  "raio_pm": 158,
+  "ionizacao_ev": 8.994,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 594.22,
+  "ebulicao_k": 1040.0,
+  "densidade": 8.69,
+  "ano": 1817,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon cádmio"
+   }
+  ]
+ },
+ {
+  "z": 49,
+  "simbolo": "In",
+  "nome": "Índio",
+  "nome_en": "Indium",
+  "massa": 114.818,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.78,
+  "raio_pm": 193,
+  "ionizacao_ev": 5.786,
+  "afinidade_ev": 0.3,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 429.75,
+  "ebulicao_k": 2345.0,
+  "densidade": 7.31,
+  "ano": 1863,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon índio"
+   }
+  ]
+ },
+ {
+  "z": 50,
+  "simbolo": "Sn",
+  "nome": "Estanho",
+  "nome_en": "Tin",
+  "massa": 118.71,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.96,
+  "raio_pm": 217,
+  "ionizacao_ev": 7.344,
+  "afinidade_ev": 1.2,
+  "oxidacao": [
+   4,
+   2
+  ],
+  "fusao_k": 505.08,
+  "ebulicao_k": 2875.0,
+  "densidade": 7.287,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon estanho(II)"
+   },
+   {
+    "carga": 4,
+    "nome": "Íon estanho(IV)"
+   }
+  ]
+ },
+ {
+  "z": 51,
+  "simbolo": "Sb",
+  "nome": "Antimônio",
+  "nome_en": "Antimony",
+  "massa": 121.76,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.05,
+  "raio_pm": 206,
+  "ionizacao_ev": 8.64,
+  "afinidade_ev": 1.07,
+  "oxidacao": [
+   5,
+   3,
+   -3
+  ],
+  "fusao_k": 903.78,
+  "ebulicao_k": 1860.0,
+  "densidade": 6.685,
+  "ano": 0,
+  "ions": []
+ },
+ {
+  "z": 52,
+  "simbolo": "Te",
+  "nome": "Telúrio",
+  "nome_en": "Tellurium",
+  "massa": 127.6,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.1,
+  "raio_pm": 206,
+  "ionizacao_ev": 9.01,
+  "afinidade_ev": 1.971,
+  "oxidacao": [
+   6,
+   4,
+   -2
+  ],
+  "fusao_k": 722.66,
+  "ebulicao_k": 1261.0,
+  "densidade": 6.232,
+  "ano": 1782,
+  "ions": [
+   {
+    "carga": -2,
+    "nome": "Telureto"
+   }
+  ]
+ },
+ {
+  "z": 53,
+  "simbolo": "I",
+  "nome": "Iodo",
+  "nome_en": "Iodine",
+  "massa": 126.9045,
+  "categoria": "halogenio",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.66,
+  "raio_pm": 198,
+  "ionizacao_ev": 10.451,
+  "afinidade_ev": 3.059,
+  "oxidacao": [
+   7,
+   5,
+   1,
+   -1
+  ],
+  "fusao_k": 386.85,
+  "ebulicao_k": 457.55,
+  "densidade": 4.93,
+  "ano": 1811,
+  "ions": [
+   {
+    "carga": -1,
+    "nome": "Iodeto"
+   }
+  ]
+ },
+ {
+  "z": 54,
+  "simbolo": "Xe",
+  "nome": "Xenônio",
+  "nome_en": "Xenon",
+  "massa": 131.29,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": 2.6,
+  "raio_pm": 216,
+  "ionizacao_ev": 12.13,
+  "afinidade_ev": null,
+  "oxidacao": [
+   0
+  ],
+  "fusao_k": 161.36,
+  "ebulicao_k": 165.03,
+  "densidade": 0.005887,
+  "ano": 1898,
+  "ions": []
+ },
+ {
+  "z": 55,
+  "simbolo": "Cs",
+  "nome": "Césio",
+  "nome_en": "Cesium",
+  "massa": 132.905452,
+  "categoria": "alcalino",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.79,
+  "raio_pm": 343,
+  "ionizacao_ev": 3.894,
+  "afinidade_ev": 0.472,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 301.59,
+  "ebulicao_k": 944.0,
+  "densidade": 1.93,
+  "ano": 1860,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon césio"
+   }
+  ]
+ },
+ {
+  "z": 56,
+  "simbolo": "Ba",
+  "nome": "Bário",
+  "nome_en": "Barium",
+  "massa": 137.33,
+  "categoria": "alcalinoterroso",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.89,
+  "raio_pm": 268,
+  "ionizacao_ev": 5.212,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 1000.0,
+  "ebulicao_k": 2170.0,
+  "densidade": 3.62,
+  "ano": 1808,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon bário"
+   }
+  ]
+ },
+ {
+  "z": 57,
+  "simbolo": "La",
+  "nome": "Lantânio",
+  "nome_en": "Lanthanum",
+  "massa": 138.9055,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.1,
+  "raio_pm": 240,
+  "ionizacao_ev": 5.577,
+  "afinidade_ev": 0.5,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1191.0,
+  "ebulicao_k": 3737.0,
+  "densidade": 6.15,
+  "ano": 1839,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon lantânio"
+   }
+  ]
+ },
+ {
+  "z": 58,
+  "simbolo": "Ce",
+  "nome": "Cério",
+  "nome_en": "Cerium",
+  "massa": 140.116,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.12,
+  "raio_pm": 235,
+  "ionizacao_ev": 5.539,
+  "afinidade_ev": 0.5,
+  "oxidacao": [
+   4,
+   3
+  ],
+  "fusao_k": 1071.0,
+  "ebulicao_k": 3697.0,
+  "densidade": 6.77,
+  "ano": 1803,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon cério(III)"
+   },
+   {
+    "carga": 4,
+    "nome": "Íon cério(IV)"
+   }
+  ]
+ },
+ {
+  "z": 59,
+  "simbolo": "Pr",
+  "nome": "Praseodímio",
+  "nome_en": "Praseodymium",
+  "massa": 140.90766,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.13,
+  "raio_pm": 239,
+  "ionizacao_ev": 5.464,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1204.0,
+  "ebulicao_k": 3793.0,
+  "densidade": 6.77,
+  "ano": 1885,
+  "ions": []
+ },
+ {
+  "z": 60,
+  "simbolo": "Nd",
+  "nome": "Neodímio",
+  "nome_en": "Neodymium",
+  "massa": 144.24,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.14,
+  "raio_pm": 229,
+  "ionizacao_ev": 5.525,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1294.0,
+  "ebulicao_k": 3347.0,
+  "densidade": 7.01,
+  "ano": 1885,
+  "ions": []
+ },
+ {
+  "z": 61,
+  "simbolo": "Pm",
+  "nome": "Promécio",
+  "nome_en": "Promethium",
+  "massa": 144.91276,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 236,
+  "ionizacao_ev": 5.55,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1315.0,
+  "ebulicao_k": 3273.0,
+  "densidade": 7.26,
+  "ano": 1945,
+  "ions": []
+ },
+ {
+  "z": 62,
+  "simbolo": "Sm",
+  "nome": "Samário",
+  "nome_en": "Samarium",
+  "massa": 150.4,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.17,
+  "raio_pm": 229,
+  "ionizacao_ev": 5.644,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1347.0,
+  "ebulicao_k": 2067.0,
+  "densidade": 7.52,
+  "ano": 1879,
+  "ions": []
+ },
+ {
+  "z": 63,
+  "simbolo": "Eu",
+  "nome": "Európio",
+  "nome_en": "Europium",
+  "massa": 151.964,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 233,
+  "ionizacao_ev": 5.67,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1095.0,
+  "ebulicao_k": 1802.0,
+  "densidade": 5.24,
+  "ano": 1901,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon európio(II)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon európio(III)"
+   }
+  ]
+ },
+ {
+  "z": 64,
+  "simbolo": "Gd",
+  "nome": "Gadolínio",
+  "nome_en": "Gadolinium",
+  "massa": 157.2,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.2,
+  "raio_pm": 237,
+  "ionizacao_ev": 6.15,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1586.0,
+  "ebulicao_k": 3546.0,
+  "densidade": 7.9,
+  "ano": 1880,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon gadolínio"
+   }
+  ]
+ },
+ {
+  "z": 65,
+  "simbolo": "Tb",
+  "nome": "Térbio",
+  "nome_en": "Terbium",
+  "massa": 158.92535,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 221,
+  "ionizacao_ev": 5.864,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1629.0,
+  "ebulicao_k": 3503.0,
+  "densidade": 8.23,
+  "ano": 1843,
+  "ions": []
+ },
+ {
+  "z": 66,
+  "simbolo": "Dy",
+  "nome": "Disprósio",
+  "nome_en": "Dysprosium",
+  "massa": 162.5,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.22,
+  "raio_pm": 229,
+  "ionizacao_ev": 5.939,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1685.0,
+  "ebulicao_k": 2840.0,
+  "densidade": 8.55,
+  "ano": 1886,
+  "ions": []
+ },
+ {
+  "z": 67,
+  "simbolo": "Ho",
+  "nome": "Hólmio",
+  "nome_en": "Holmium",
+  "massa": 164.93033,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.23,
+  "raio_pm": 216,
+  "ionizacao_ev": 6.022,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1747.0,
+  "ebulicao_k": 2973.0,
+  "densidade": 8.8,
+  "ano": 1878,
+  "ions": []
+ },
+ {
+  "z": 68,
+  "simbolo": "Er",
+  "nome": "Érbio",
+  "nome_en": "Erbium",
+  "massa": 167.26,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.24,
+  "raio_pm": 235,
+  "ionizacao_ev": 6.108,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1802.0,
+  "ebulicao_k": 3141.0,
+  "densidade": 9.07,
+  "ano": 1843,
+  "ions": []
+ },
+ {
+  "z": 69,
+  "simbolo": "Tm",
+  "nome": "Túlio",
+  "nome_en": "Thulium",
+  "massa": 168.93422,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.25,
+  "raio_pm": 227,
+  "ionizacao_ev": 6.184,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1818.0,
+  "ebulicao_k": 2223.0,
+  "densidade": 9.32,
+  "ano": 1879,
+  "ions": []
+ },
+ {
+  "z": 70,
+  "simbolo": "Yb",
+  "nome": "Itérbio",
+  "nome_en": "Ytterbium",
+  "massa": 173.05,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 242,
+  "ionizacao_ev": 6.254,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1092.0,
+  "ebulicao_k": 1469.0,
+  "densidade": 6.9,
+  "ano": 1878,
+  "ions": []
+ },
+ {
+  "z": 71,
+  "simbolo": "Lu",
+  "nome": "Lutécio",
+  "nome_en": "Lutetium",
+  "massa": 174.9668,
+  "categoria": "lantanideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.27,
+  "raio_pm": 221,
+  "ionizacao_ev": 5.426,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1936.0,
+  "ebulicao_k": 3675.0,
+  "densidade": 9.84,
+  "ano": 1907,
+  "ions": []
+ },
+ {
+  "z": 72,
+  "simbolo": "Hf",
+  "nome": "Háfnio",
+  "nome_en": "Hafnium",
+  "massa": 178.49,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 212,
+  "ionizacao_ev": 6.825,
+  "afinidade_ev": null,
+  "oxidacao": [
+   4
+  ],
+  "fusao_k": 2506.0,
+  "ebulicao_k": 4876.0,
+  "densidade": 13.3,
+  "ano": 1923,
+  "ions": []
+ },
+ {
+  "z": 73,
+  "simbolo": "Ta",
+  "nome": "Tântalo",
+  "nome_en": "Tantalum",
+  "massa": 180.9479,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.5,
+  "raio_pm": 217,
+  "ionizacao_ev": 7.89,
+  "afinidade_ev": 0.322,
+  "oxidacao": [
+   5
+  ],
+  "fusao_k": 3290.0,
+  "ebulicao_k": 5731.0,
+  "densidade": 16.4,
+  "ano": 1802,
+  "ions": []
+ },
+ {
+  "z": 74,
+  "simbolo": "W",
+  "nome": "Tungstênio",
+  "nome_en": "Tungsten",
+  "massa": 183.84,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.36,
+  "raio_pm": 210,
+  "ionizacao_ev": 7.98,
+  "afinidade_ev": 0.815,
+  "oxidacao": [
+   6
+  ],
+  "fusao_k": 3695.0,
+  "ebulicao_k": 5828.0,
+  "densidade": 19.3,
+  "ano": 1783,
+  "ions": []
+ },
+ {
+  "z": 75,
+  "simbolo": "Re",
+  "nome": "Rênio",
+  "nome_en": "Rhenium",
+  "massa": 186.207,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.9,
+  "raio_pm": 217,
+  "ionizacao_ev": 7.88,
+  "afinidade_ev": 0.15,
+  "oxidacao": [
+   7,
+   6,
+   4
+  ],
+  "fusao_k": 3459.0,
+  "ebulicao_k": 5869.0,
+  "densidade": 20.8,
+  "ano": 1925,
+  "ions": []
+ },
+ {
+  "z": 76,
+  "simbolo": "Os",
+  "nome": "Ósmio",
+  "nome_en": "Osmium",
+  "massa": 190.2,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.2,
+  "raio_pm": 216,
+  "ionizacao_ev": 8.7,
+  "afinidade_ev": 1.1,
+  "oxidacao": [
+   4,
+   3
+  ],
+  "fusao_k": 3306.0,
+  "ebulicao_k": 5285.0,
+  "densidade": 22.57,
+  "ano": 1803,
+  "ions": []
+ },
+ {
+  "z": 77,
+  "simbolo": "Ir",
+  "nome": "Irídio",
+  "nome_en": "Iridium",
+  "massa": 192.22,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.2,
+  "raio_pm": 202,
+  "ionizacao_ev": 9.1,
+  "afinidade_ev": 1.565,
+  "oxidacao": [
+   4,
+   3
+  ],
+  "fusao_k": 2719.0,
+  "ebulicao_k": 4701.0,
+  "densidade": 22.42,
+  "ano": 1803,
+  "ions": []
+ },
+ {
+  "z": 78,
+  "simbolo": "Pt",
+  "nome": "Platina",
+  "nome_en": "Platinum",
+  "massa": 195.08,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.28,
+  "raio_pm": 209,
+  "ionizacao_ev": 9.0,
+  "afinidade_ev": 2.128,
+  "oxidacao": [
+   4,
+   2
+  ],
+  "fusao_k": 2041.55,
+  "ebulicao_k": 4098.0,
+  "densidade": 21.46,
+  "ano": 1735,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon platina(II)"
+   },
+   {
+    "carga": 4,
+    "nome": "Íon platina(IV)"
+   }
+  ]
+ },
+ {
+  "z": 79,
+  "simbolo": "Au",
+  "nome": "Ouro",
+  "nome_en": "Gold",
+  "massa": 196.96657,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.54,
+  "raio_pm": 166,
+  "ionizacao_ev": 9.226,
+  "afinidade_ev": 2.309,
+  "oxidacao": [
+   3,
+   1
+  ],
+  "fusao_k": 1337.33,
+  "ebulicao_k": 3129.0,
+  "densidade": 19.282,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon ouro(I)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon ouro(III)"
+   }
+  ]
+ },
+ {
+  "z": 80,
+  "simbolo": "Hg",
+  "nome": "Mercúrio",
+  "nome_en": "Mercury",
+  "massa": 200.59,
+  "categoria": "transicao",
+  "estado": "liquido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.0,
+  "raio_pm": 209,
+  "ionizacao_ev": 10.438,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2,
+   1
+  ],
+  "fusao_k": 234.32,
+  "ebulicao_k": 629.88,
+  "densidade": 13.5336,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon mercúrio(II)"
+   }
+  ]
+ },
+ {
+  "z": 81,
+  "simbolo": "Tl",
+  "nome": "Tálio",
+  "nome_en": "Thallium",
+  "massa": 204.383,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.62,
+  "raio_pm": 196,
+  "ionizacao_ev": 6.108,
+  "afinidade_ev": 0.2,
+  "oxidacao": [
+   3,
+   1
+  ],
+  "fusao_k": 577.0,
+  "ebulicao_k": 1746.0,
+  "densidade": 11.8,
+  "ano": 1861,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon tálio(I)"
+   },
+   {
+    "carga": 3,
+    "nome": "Íon tálio(III)"
+   }
+  ]
+ },
+ {
+  "z": 82,
+  "simbolo": "Pb",
+  "nome": "Chumbo",
+  "nome_en": "Lead",
+  "massa": 207.0,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.33,
+  "raio_pm": 202,
+  "ionizacao_ev": 7.417,
+  "afinidade_ev": 0.36,
+  "oxidacao": [
+   4,
+   2
+  ],
+  "fusao_k": 600.61,
+  "ebulicao_k": 2022.0,
+  "densidade": 11.342,
+  "ano": 0,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon chumbo(II)"
+   },
+   {
+    "carga": 4,
+    "nome": "Íon chumbo(IV)"
+   }
+  ]
+ },
+ {
+  "z": 83,
+  "simbolo": "Bi",
+  "nome": "Bismuto",
+  "nome_en": "Bismuth",
+  "massa": 208.9804,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.02,
+  "raio_pm": 207,
+  "ionizacao_ev": 7.289,
+  "afinidade_ev": 0.946,
+  "oxidacao": [
+   5,
+   3
+  ],
+  "fusao_k": 544.55,
+  "ebulicao_k": 1837.0,
+  "densidade": 9.807,
+  "ano": 1753,
+  "ions": [
+   {
+    "carga": 3,
+    "nome": "Íon bismuto(III)"
+   }
+  ]
+ },
+ {
+  "z": 84,
+  "simbolo": "Po",
+  "nome": "Polônio",
+  "nome_en": "Polonium",
+  "massa": 208.98243,
+  "categoria": "semimetal",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.0,
+  "raio_pm": 197,
+  "ionizacao_ev": 8.417,
+  "afinidade_ev": 1.9,
+  "oxidacao": [
+   4,
+   2
+  ],
+  "fusao_k": 527.0,
+  "ebulicao_k": 1235.0,
+  "densidade": 9.32,
+  "ano": 1898,
+  "ions": []
+ },
+ {
+  "z": 85,
+  "simbolo": "At",
+  "nome": "Astato",
+  "nome_en": "Astatine",
+  "massa": 209.98715,
+  "categoria": "halogenio",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 2.2,
+  "raio_pm": 202,
+  "ionizacao_ev": 9.5,
+  "afinidade_ev": 2.8,
+  "oxidacao": [
+   7,
+   5,
+   3,
+   1,
+   -1
+  ],
+  "fusao_k": 575.0,
+  "ebulicao_k": null,
+  "densidade": 7.0,
+  "ano": 1940,
+  "ions": [
+   {
+    "carga": -1,
+    "nome": "Astateto"
+   }
+  ]
+ },
+ {
+  "z": 86,
+  "simbolo": "Rn",
+  "nome": "Radônio",
+  "nome_en": "Radon",
+  "massa": 222.01758,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": 220,
+  "ionizacao_ev": 10.745,
+  "afinidade_ev": null,
+  "oxidacao": [
+   0
+  ],
+  "fusao_k": 202.0,
+  "ebulicao_k": 211.45,
+  "densidade": 0.00973,
+  "ano": 1900,
+  "ions": []
+ },
+ {
+  "z": 87,
+  "simbolo": "Fr",
+  "nome": "Frâncio",
+  "nome_en": "Francium",
+  "massa": 223.01973,
+  "categoria": "alcalino",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.7,
+  "raio_pm": 348,
+  "ionizacao_ev": 3.9,
+  "afinidade_ev": 0.47,
+  "oxidacao": [
+   1
+  ],
+  "fusao_k": 300.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1939,
+  "ions": [
+   {
+    "carga": 1,
+    "nome": "Íon frâncio"
+   }
+  ]
+ },
+ {
+  "z": 88,
+  "simbolo": "Ra",
+  "nome": "Rádio",
+  "nome_en": "Radium",
+  "massa": 226.02541,
+  "categoria": "alcalinoterroso",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 0.9,
+  "raio_pm": 283,
+  "ionizacao_ev": 5.279,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2
+  ],
+  "fusao_k": 973.0,
+  "ebulicao_k": 1413.0,
+  "densidade": 5.0,
+  "ano": 1898,
+  "ions": [
+   {
+    "carga": 2,
+    "nome": "Íon rádio"
+   }
+  ]
+ },
+ {
+  "z": 89,
+  "simbolo": "Ac",
+  "nome": "Actínio",
+  "nome_en": "Actinium",
+  "massa": 227.02775,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.1,
+  "raio_pm": 260,
+  "ionizacao_ev": 5.17,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1324.0,
+  "ebulicao_k": 3471.0,
+  "densidade": 10.07,
+  "ano": 1899,
+  "ions": []
+ },
+ {
+  "z": 90,
+  "simbolo": "Th",
+  "nome": "Tório",
+  "nome_en": "Thorium",
+  "massa": 232.038,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 237,
+  "ionizacao_ev": 6.08,
+  "afinidade_ev": null,
+  "oxidacao": [
+   4
+  ],
+  "fusao_k": 2023.0,
+  "ebulicao_k": 5061.0,
+  "densidade": 11.72,
+  "ano": 1828,
+  "ions": []
+ },
+ {
+  "z": 91,
+  "simbolo": "Pa",
+  "nome": "Protactínio",
+  "nome_en": "Protactinium",
+  "massa": 231.03588,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.5,
+  "raio_pm": 243,
+  "ionizacao_ev": 5.89,
+  "afinidade_ev": null,
+  "oxidacao": [
+   5,
+   4
+  ],
+  "fusao_k": 1845.0,
+  "ebulicao_k": null,
+  "densidade": 15.37,
+  "ano": 1913,
+  "ions": []
+ },
+ {
+  "z": 92,
+  "simbolo": "U",
+  "nome": "Urânio",
+  "nome_en": "Uranium",
+  "massa": 238.0289,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.38,
+  "raio_pm": 240,
+  "ionizacao_ev": 6.194,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   5,
+   4,
+   3
+  ],
+  "fusao_k": 1408.0,
+  "ebulicao_k": 4404.0,
+  "densidade": 18.95,
+  "ano": 1789,
+  "ions": []
+ },
+ {
+  "z": 93,
+  "simbolo": "Np",
+  "nome": "Netúnio",
+  "nome_en": "Neptunium",
+  "massa": 237.048172,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.36,
+  "raio_pm": 221,
+  "ionizacao_ev": 6.266,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   5,
+   4,
+   3
+  ],
+  "fusao_k": 917.0,
+  "ebulicao_k": 4175.0,
+  "densidade": 20.25,
+  "ano": 1940,
+  "ions": []
+ },
+ {
+  "z": 94,
+  "simbolo": "Pu",
+  "nome": "Plutônio",
+  "nome_en": "Plutonium",
+  "massa": 244.0642,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.28,
+  "raio_pm": 243,
+  "ionizacao_ev": 6.06,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   5,
+   4,
+   3
+  ],
+  "fusao_k": 913.0,
+  "ebulicao_k": 3501.0,
+  "densidade": 19.84,
+  "ano": 1940,
+  "ions": []
+ },
+ {
+  "z": 95,
+  "simbolo": "Am",
+  "nome": "Amerício",
+  "nome_en": "Americium",
+  "massa": 243.06138,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 244,
+  "ionizacao_ev": 5.993,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   5,
+   4,
+   3
+  ],
+  "fusao_k": 1449.0,
+  "ebulicao_k": 2284.0,
+  "densidade": 13.69,
+  "ano": 1944,
+  "ions": []
+ },
+ {
+  "z": 96,
+  "simbolo": "Cm",
+  "nome": "Cúrio",
+  "nome_en": "Curium",
+  "massa": 247.07035,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 245,
+  "ionizacao_ev": 6.02,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1618.0,
+  "ebulicao_k": 3400.0,
+  "densidade": 13.51,
+  "ano": 1944,
+  "ions": []
+ },
+ {
+  "z": 97,
+  "simbolo": "Bk",
+  "nome": "Berquélio",
+  "nome_en": "Berkelium",
+  "massa": 247.07031,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 244,
+  "ionizacao_ev": 6.23,
+  "afinidade_ev": null,
+  "oxidacao": [
+   4,
+   3
+  ],
+  "fusao_k": 1323.0,
+  "ebulicao_k": null,
+  "densidade": 14.0,
+  "ano": 1949,
+  "ions": []
+ },
+ {
+  "z": 98,
+  "simbolo": "Cf",
+  "nome": "Califórnio",
+  "nome_en": "Californium",
+  "massa": 251.07959,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 245,
+  "ionizacao_ev": 6.3,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1173.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1950,
+  "ions": []
+ },
+ {
+  "z": 99,
+  "simbolo": "Es",
+  "nome": "Einstênio",
+  "nome_en": "Einsteinium",
+  "massa": 252.083,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": 245,
+  "ionizacao_ev": 6.42,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1133.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1952,
+  "ions": []
+ },
+ {
+  "z": 100,
+  "simbolo": "Fm",
+  "nome": "Férmio",
+  "nome_en": "Fermium",
+  "massa": 257.09511,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": null,
+  "ionizacao_ev": 6.5,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1800.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1952,
+  "ions": []
+ },
+ {
+  "z": 101,
+  "simbolo": "Md",
+  "nome": "Mendelévio",
+  "nome_en": "Mendelevium",
+  "massa": 258.09843,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": null,
+  "ionizacao_ev": 6.58,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1100.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1955,
+  "ions": []
+ },
+ {
+  "z": 102,
+  "simbolo": "No",
+  "nome": "Nobélio",
+  "nome_en": "Nobelium",
+  "massa": 259.101,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": null,
+  "ionizacao_ev": 6.65,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3,
+   2
+  ],
+  "fusao_k": 1100.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1957,
+  "ions": []
+ },
+ {
+  "z": 103,
+  "simbolo": "Lr",
+  "nome": "Laurêncio",
+  "nome_en": "Lawrencium",
+  "massa": 266.12,
+  "categoria": "actinideo",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": 1.3,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3
+  ],
+  "fusao_k": 1900.0,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1961,
+  "ions": []
+ },
+ {
+  "z": 104,
+  "simbolo": "Rf",
+  "nome": "Rutherfórdio",
+  "nome_en": "Rutherfordium",
+  "massa": 267.122,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   4
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1964,
+  "ions": []
+ },
+ {
+  "z": 105,
+  "simbolo": "Db",
+  "nome": "Dúbnio",
+  "nome_en": "Dubnium",
+  "massa": 268.126,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   5,
+   4,
+   3
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1967,
+  "ions": []
+ },
+ {
+  "z": 106,
+  "simbolo": "Sg",
+  "nome": "Seabórgio",
+  "nome_en": "Seaborgium",
+  "massa": 269.128,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   5,
+   4,
+   3,
+   0
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1974,
+  "ions": []
+ },
+ {
+  "z": 107,
+  "simbolo": "Bh",
+  "nome": "Bóhrio",
+  "nome_en": "Bohrium",
+  "massa": 270.133,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   7,
+   5,
+   4,
+   3
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1976,
+  "ions": []
+ },
+ {
+  "z": 108,
+  "simbolo": "Hs",
+  "nome": "Hássio",
+  "nome_en": "Hassium",
+  "massa": 269.1336,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   8,
+   6,
+   5,
+   4,
+   3,
+   2
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1984,
+  "ions": []
+ },
+ {
+  "z": 109,
+  "simbolo": "Mt",
+  "nome": "Meitnério",
+  "nome_en": "Meitnerium",
+  "massa": 277.154,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": false,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   9,
+   8,
+   6,
+   4,
+   3,
+   1
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1982,
+  "ions": []
+ },
+ {
+  "z": 110,
+  "simbolo": "Ds",
+  "nome": "Darmstádtio",
+  "nome_en": "Darmstadtium",
+  "massa": 282.166,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   8,
+   6,
+   4,
+   2,
+   0
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1994,
+  "ions": []
+ },
+ {
+  "z": 111,
+  "simbolo": "Rg",
+  "nome": "Roentgênio",
+  "nome_en": "Roentgenium",
+  "massa": 282.169,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   5,
+   3,
+   1,
+   -1
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1994,
+  "ions": []
+ },
+ {
+  "z": 112,
+  "simbolo": "Cn",
+  "nome": "Copernício",
+  "nome_en": "Copernicium",
+  "massa": 286.179,
+  "categoria": "transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   2,
+   1,
+   0
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1996,
+  "ions": []
+ },
+ {
+  "z": 113,
+  "simbolo": "Nh",
+  "nome": "Nihônio",
+  "nome_en": "Nihonium",
+  "massa": 286.182,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 2004,
+  "ions": []
+ },
+ {
+  "z": 114,
+  "simbolo": "Fl",
+  "nome": "Fleróvio",
+  "nome_en": "Flerovium",
+  "massa": 290.192,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   4,
+   2,
+   1,
+   0
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 1998,
+  "ions": []
+ },
+ {
+  "z": 115,
+  "simbolo": "Mc",
+  "nome": "Moscóvio",
+  "nome_en": "Moscovium",
+  "massa": 290.196,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   3,
+   1
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 2003,
+  "ions": []
+ },
+ {
+  "z": 116,
+  "simbolo": "Lv",
+  "nome": "Livermório",
+  "nome_en": "Livermorium",
+  "massa": 293.205,
+  "categoria": "pos-transicao",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   4,
+   2,
+   -2
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 2000,
+  "ions": []
+ },
+ {
+  "z": 117,
+  "simbolo": "Ts",
+  "nome": "Tenessino",
+  "nome_en": "Tennessine",
+  "massa": 294.211,
+  "categoria": "halogenio",
+  "estado": "solido",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   5,
+   3,
+   1,
+   -1
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 2010,
+  "ions": []
+ },
+ {
+  "z": 118,
+  "simbolo": "Og",
+  "nome": "Oganessônio",
+  "nome_en": "Oganesson",
+  "massa": 295.216,
+  "categoria": "gas-nobre",
+  "estado": "gasoso",
+  "estado_previsto": true,
+  "eletronegatividade": null,
+  "raio_pm": null,
+  "ionizacao_ev": null,
+  "afinidade_ev": null,
+  "oxidacao": [
+   6,
+   4,
+   2,
+   1,
+   0,
+   -1
+  ],
+  "fusao_k": null,
+  "ebulicao_k": null,
+  "densidade": null,
+  "ano": 2006,
+  "ions": []
+ }
+]

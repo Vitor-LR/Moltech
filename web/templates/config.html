@@ -1,0 +1,114 @@
+{{define "conteudo"}}
+<section class="pagina pagina-estreita">
+    <div class="cabecalho">
+        <h1>{{tr "Configurações" "Settings"}}</h1>
+        <p>{{tr "As preferências ficam salvas neste navegador e valem para todas as páginas." "Preferences are saved in this browser and apply to every page."}}</p>
+    </div>
+
+    <div class="config-grade">
+        <article class="cartao">
+            <h2>{{tr "Modelo do átomo" "Atom model"}}</h2>
+            <div class="opcao">
+                <div><strong>{{tr "Aba inicial da ficha" "Initial card tab"}}</strong><span>{{tr "O que aparece primeiro ao abrir um elemento." "What shows first when you open an element."}}</span></div>
+                <div class="pilula" data-config="aba">
+                    <button type="button" data-valor="estrutura">{{tr "Estrutura" "Structure"}}</button>
+                    <button type="button" data-valor="orbitais">{{tr "Orbitais" "Orbitals"}}</button>
+                    <button type="button" data-valor="ions">{{tr "Íons" "Ions"}}</button>
+                    <button type="button" data-valor="propriedades">{{tr "Propriedades" "Properties"}}</button>
+                </div>
+            </div>
+            <div class="opcao">
+                <div><strong>{{tr "Velocidade dos elétrons" "Electron speed"}}</strong><span>{{tr "Ritmo da animação do modelo 3D." "Pace of the 3D model animation."}}</span></div>
+                <label class="deslizante"><input type="range" min="0.2" max="2.5" step="0.1" data-config="velocidade"><output></output></label>
+            </div>
+            <div class="opcao">
+                <div><strong>{{tr "Girar sozinho" "Auto-rotate"}}</strong><span>{{tr "O modelo gira devagar enquanto ninguém o arrasta." "The model turns slowly while nobody is dragging it."}}</span></div>
+                <label class="chave"><input type="checkbox" data-config="girar"><i></i></label>
+            </div>
+        </article>
+
+        <article class="cartao">
+            <h2>{{tr "Unidades" "Units"}}</h2>
+            <div class="opcao">
+                <div><strong>{{tr "Temperatura" "Temperature"}}</strong><span>{{tr "Pontos de fusão e de ebulição." "Melting and boiling points."}}</span></div>
+                <div class="pilula" data-config="temp">
+                    <button type="button" data-valor="C">°C</button>
+                    <button type="button" data-valor="F">°F</button>
+                    <button type="button" data-valor="K">K</button>
+                </div>
+            </div>
+            <div class="opcao">
+                <div><strong>{{tr "Energia" "Energy"}}</strong><span>{{tr "Energia de ionização e afinidade eletrônica." "Ionization energy and electron affinity."}}</span></div>
+                <div class="pilula" data-config="energia">
+                    <button type="button" data-valor="kJ">kJ/mol</button>
+                    <button type="button" data-valor="eV">eV</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="cartao cartao-largo">
+            <h2>{{tr "Personalizar cartões dos elementos" "Customize element cards"}}</h2>
+            <div class="personalizar">
+                <div class="personalizar-previa">
+                    <span class="rotulo-previa">{{tr "Prévia em tempo real" "Live preview"}}</span>
+                    <div class="el el-previa" id="previa-cartao" data-cat="nao-metal"><span class="el-z">1</span><span class="el-s">H</span><span class="el-n">Hidrogênio</span><span class="el-m">1,008</span></div>
+                    <!-- elemento mostrado na prévia; valor = símbolo|Z|nome|name|massa|categoria -->
+                    <div class="pilula" id="previa-elemento" role="group" {{rot "Elemento da prévia" "Preview element"}}>
+                        <button type="button" data-valor="H|1|Hidrogênio|Hydrogen|1.008|nao-metal" aria-pressed="true">H</button>
+                        <button type="button" data-valor="Fe|26|Ferro|Iron|55.84|transicao" aria-pressed="false">Fe</button>
+                        <button type="button" data-valor="Na|11|Sódio|Sodium|22.99|alcalino" aria-pressed="false">Na</button>
+                        <button type="button" data-valor="Og|118|Oganessônio|Oganesson|295.216|gas-nobre" aria-pressed="false">Og</button>
+                    </div>
+                </div>
+                <div class="personalizar-controles">
+                    <div class="opcao">
+                        <div><strong>{{tr "Modelos prontos" "Presets"}}</strong></div>
+                        <div class="pilula" id="modelos">
+                            <button type="button" data-modelo="padrao">{{tr "Padrão" "Default"}}</button>
+                            <button type="button" data-modelo="minimo">{{tr "Minimalista" "Minimal"}}</button>
+                            <button type="button" data-modelo="detalhado">{{tr "Detalhado" "Detailed"}}</button>
+                        </div>
+                    </div>
+                    <div class="opcao"><div><strong>{{tr "Número atômico" "Atomic number"}}</strong></div><label class="chave"><input type="checkbox" data-cartao="numero"><i></i></label></div>
+                    <div class="opcao"><div><strong>{{tr "Nome" "Name"}}</strong></div><label class="chave"><input type="checkbox" data-cartao="nome"><i></i></label></div>
+                    <div class="opcao"><div><strong>{{tr "Massa atômica" "Atomic mass"}}</strong></div><label class="chave"><input type="checkbox" data-cartao="massa"><i></i></label></div>
+                    <div class="opcao"><div><strong>{{tr "Tamanho do símbolo" "Symbol size"}}</strong></div><label class="deslizante"><input type="range" min="70" max="130" step="5" data-cartao="simbolo" data-sufixo="%"><output></output></label></div>
+                    <div class="opcao"><div><strong>{{tr "Cantos" "Corners"}}</strong></div><label class="deslizante"><input type="range" min="0" max="50" step="1" data-cartao="cantos" data-sufixo="%"><output></output></label></div>
+                    <div class="opcao"><div><strong>{{tr "Borda" "Border"}}</strong></div><label class="deslizante"><input type="range" min="0" max="3" step="0.5" data-cartao="borda" data-sufixo="px"><output></output></label></div>
+                    <div class="opcao"><div><strong>{{tr "Intensidade da cor" "Color intensity"}}</strong></div><label class="deslizante"><input type="range" min="0" max="220" step="5" data-cartao="cor" data-sufixo="%"><output></output></label></div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="config-rodape">
+        <button type="button" class="botao" id="redefinir">{{tr "Redefinir tudo" "Reset everything"}}</button>
+        <span class="nota" id="salvo" role="status"></span>
+    </div>
+</section>
+{{end}}
+
+{{define "ajuda"}}
+<ul class="ajuda-lista pt">
+<li><strong>Menu superior</strong> — troca entre a Tabela, os Íons e as Configurações.</li>
+<li><strong>PT / EN</strong> — troca o idioma de todo o site entre português e inglês.</li>
+<li><strong>Modelo do átomo</strong> — escolhe a aba que abre primeiro na ficha, a velocidade dos elétrons e se o modelo 3D gira sozinho.</li>
+<li><strong>Unidades</strong> — define como temperatura e energia aparecem na ficha e na tabela.</li>
+<li><strong>Personalizar cartões</strong> — muda a aparência das casas da tabela: o que mostrar, tamanho do símbolo, cantos, borda e intensidade da cor. A prévia à esquerda mostra o resultado na hora.</li>
+<li><strong>Modelos prontos</strong> — aplica um conjunto de ajustes de uma vez.</li>
+<li><strong>Redefinir tudo</strong> — volta todas as preferências ao padrão.</li>
+<li><strong>Salvamento</strong> — cada mudança é salva automaticamente neste navegador; nada é enviado a servidor.</li>
+</ul>
+<ul class="ajuda-lista en" lang="en">
+<li><strong>Top menu</strong> — switches between the Table, Ions and Settings.</li>
+<li><strong>PT / EN</strong> — switches the whole site between Portuguese and English.</li>
+<li><strong>Atom model</strong> — picks the tab that opens first in the card, the electron speed and whether the 3D model rotates by itself.</li>
+<li><strong>Units</strong> — sets how temperature and energy appear in the card and in the table.</li>
+<li><strong>Customize cards</strong> — changes how the table cells look: what to show, symbol size, corners, border and color intensity. The preview on the left shows the result right away.</li>
+<li><strong>Presets</strong> — applies a set of adjustments at once.</li>
+<li><strong>Reset everything</strong> — returns every preference to its default.</li>
+<li><strong>Saving</strong> — every change is saved automatically in this browser; nothing is sent to a server.</li>
+</ul>
+{{end}}
+
+{{define "scripts"}}<script src="{{est "js/config.js"}}" defer></script>{{end}}

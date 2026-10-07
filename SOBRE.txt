@@ -1,0 +1,131 @@
+MOLTECH — SOBRE O PROJETO
+=========================
+
+Este texto estava na seção "Sobre" do site. Saiu de lá para o site ficar só
+com a tabela, os íons e as configurações. Use o que quiser dele no portfólio
+e no GitHub.
+
+
+O QUE É
+-------
+O Moltech é uma tabela periódica interativa com os 118 elementos, feita como
+projeto acadêmico por Vitor Lombard Rocha. Ao selecionar um elemento, ele
+mostra um modelo 3D do átomo que gira com o mouse, a distribuição dos elétrons
+nos orbitais, os íons que o elemento forma e suas propriedades.
+
+O projeto é escrito em Go, só com a biblioteca padrão. O programa não guarda a
+estrutura eletrônica pronta: ele a calcula a partir do número atômico de cada
+elemento.
+
+
+O QUE O SITE TEM
+----------------
+Tabela
+  - 118 elementos, com resumo ao passar o cursor.
+  - "Visualizar por": muda o critério de cor da tabela; "Redefinir" volta
+    ao original.
+      Classificação: categoria, bloco, tipo de metal, estado físico.
+      Propriedade:   ponto de fusão, ponto de ebulição, densidade,
+                     eletronegatividade, 1ª energia de ionização,
+                     afinidade eletrônica, raio atômico.
+  - Controle deslizante: em propriedade, destaca os elementos acima de um
+    valor; em estado físico, escolhe a temperatura (de -273 °C a 6000 °C).
+  - Legenda: passar o cursor destaca o grupo; clicar mantém o destaque.
+  - Busca por nome, símbolo ou número atômico.
+  - Em telas pequenas a tabela inteira encolhe até caber, sem rolagem lateral;
+    as casas mostram só o símbolo e a legenda vira o botão "Destacar".
+
+Ficha do elemento
+  - Modelo 3D que gira ao arrastar, com zoom na roda do mouse.
+  - Clicar em uma camada a seleciona e mostra quantos elétrons ela tem.
+  - Botão de subcamadas: agrupa os elétrons em faixas s, p, d e f.
+  - Abre também na página de Íons, sem sair dela.
+  - Estrutura: prótons, nêutrons, elétrons e elétrons por camada.
+  - Orbitais: configuração eletrônica, diagrama de orbitais e a forma de cada
+    orbital (s, p, d, f) em 3D.
+  - Íons: íons comuns; ao clicar, o modelo mostra o íon.
+  - Propriedades: massa, densidade, pontos de fusão e ebulição e outras.
+
+Íons
+  - 100 cátions e ânions, monoatômicos e poliatômicos, com massa molar.
+
+Configurações
+  - Aba inicial da ficha, velocidade dos elétrons, giro automático.
+  - Unidades de temperatura (°C, °F, K) e de energia (kJ/mol, eV).
+  - Personalização dos cartões dos elementos, com prévia em tempo real.
+
+Idioma
+  - O botão PT / EN do cabeçalho troca todo o site entre português (padrão)
+    e inglês, incluindo nomes dos elementos e dos íons.
+
+Ajuda
+  - O botão "?" do cabeçalho explica, em tópicos, cada parte da página.
+  - A ficha do elemento tem um "?" próprio.
+
+
+COMO OS CÁLCULOS FUNCIONAM
+--------------------------
+Posição na tabela
+  Grupo, período e bloco saem do número atômico: o período é definido pelo gás
+  nobre que o encerra, e o grupo, pela posição do elemento dentro do período.
+
+Configuração eletrônica
+  Os elétrons são distribuídos pela regra de Madelung (diagrama de Linus
+  Pauling). Depois entram as 20 exceções conhecidas, como cromo e cobre. Um
+  teste automatizado confere o resultado dos 118 elementos contra uma tabela
+  de referência.
+
+Orbitais
+  O diagrama de orbitais segue a regra de Hund: cada orbital de uma subcamada
+  recebe um elétron antes de qualquer um receber o segundo. As formas em 3D
+  usam a parte angular dos orbitais reais (harmônicos esféricos).
+
+Íons
+  Nos cátions, os elétrons saem primeiro da camada mais externa; por isso o
+  Fe3+ é [Ar] 3d5. Nos ânions, entram na próxima subcamada livre.
+
+Massa molar
+  Um leitor de fórmulas químicas (aceita parênteses, como Ca(OH)2) soma as
+  massas atômicas. É usado para os íons poliatômicos e na API.
+
+
+COMO FOI CONSTRUÍDO
+-------------------
+  - Go: cálculos de química, servidor HTTP, API em JSON e exportação do site
+    estático. Só biblioteca padrão; HTML, CSS, JS e dados vão embutidos no
+    executável.
+  - HTML, CSS e JavaScript sem frameworks. O modelo 3D é desenhado em canvas,
+    com projeção em perspectiva escrita à mão (sem bibliotecas 3D).
+  - Fonte Atkinson Hyperlegible, criada para leitura fácil, em que "Cl", "I" e
+    "Tl" não se confundem.
+
+
+FONTES DOS DADOS
+----------------
+  - PubChem (National Library of Medicine, EUA): massa atômica, propriedades
+    físicas, estados de oxidação e ano de descoberta. Domínio público.
+  - NIST Atomic Spectra Database: estado fundamental dos elementos que fogem
+    da regra de Madelung. No laurêncio, o Moltech usa 7p1 (NIST), e não 6d1.
+  - IUPAC: desenho da tabela com 18 grupos.
+
+
+LIMITAÇÕES
+----------
+  - O raio atômico é o raio de van der Waals.
+  - O número de nêutrons usa a massa atômica arredondada, que nem sempre é o
+    isótopo mais abundante (no cobre dá 35; o isótopo mais comum tem 34).
+  - Nos elementos superpesados, parte dos valores é previsão teórica.
+  - Não há dado de calor específico, então essa visualização não existe.
+  - O modelo de Bohr é didático: os elétrons não giram em órbitas circulares
+    de verdade. A aba Orbitais mostra a descrição mais fiel.
+
+
+CRÉDITOS
+--------
+A organização da interface (menu em pílula, busca recolhida, ficha com modelo
+3D, visualização por propriedade e personalização dos cartões) foi inspirada no
+Zperiod, de Philip Zhao, cujo código de referência é distribuído sob licença
+MIT. O Moltech não reutiliza o código dele: foi reescrito em Go, com desenho,
+textos e motor 3D próprios.
+
+Fontes Atkinson Hyperlegible Next e Mono: Braille Institute, licença SIL OFL 1.1.

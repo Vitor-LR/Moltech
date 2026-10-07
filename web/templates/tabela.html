@@ -1,0 +1,108 @@
+{{define "conteudo"}}
+<section class="pagina">
+    <h1 class="so-leitor">{{tr "Tabela periódica dos elementos" "Periodic table of the elements"}}</h1>
+
+    <!-- Barra: critério de cor da tabela + controle deslizante -->
+    <div class="barra">
+        <div class="visao">
+            <button type="button" class="seletor" id="visao-botao" aria-haspopup="true" aria-expanded="false" aria-controls="visao-menu">
+                <span class="seletor-pre">{{tr "Visualizar por" "View by"}}</span><strong id="visao-rotulo">Categoria</strong>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 8 4.5 4.5L14.5 8"/></svg>
+            </button>
+            <div class="visao-menu" id="visao-menu" hidden>
+                <div>
+                    <h2>{{tr "Propriedade" "Property"}}</h2>
+                    <button type="button" data-visao="fusao">{{tr "Ponto de fusão" "Melting point"}} <small data-unidade="temp"></small></button>
+                    <button type="button" data-visao="ebulicao">{{tr "Ponto de ebulição" "Boiling point"}} <small data-unidade="temp"></small></button>
+                    <button type="button" data-visao="densidade">{{tr "Densidade" "Density"}} <small>g/cm³</small></button>
+                    <button type="button" data-visao="eletronegatividade">{{tr "Eletronegatividade" "Electronegativity"}}</button>
+                    <button type="button" data-visao="ionizacao">{{tr "1ª ionização" "1st ionization"}} <small data-unidade="energia"></small></button>
+                    <button type="button" data-visao="afinidade">{{tr "Afinidade eletrônica" "Electron affinity"}} <small data-unidade="energia"></small></button>
+                    <button type="button" data-visao="raio">{{tr "Raio atômico" "Atomic radius"}} <small>pm</small></button>
+                </div>
+                <div>
+                    <h2>{{tr "Classificação" "Classification"}}</h2>
+                    <button type="button" data-visao="categoria">{{tr "Categoria" "Category"}}</button>
+                    <button type="button" data-visao="bloco">{{tr "Bloco" "Block"}}</button>
+                    <button type="button" data-visao="metal">{{tr "Tipo de metal" "Metal type"}}</button>
+                    <button type="button" data-visao="estado">{{tr "Estado físico" "Physical state"}}</button>
+                </div>
+            </div>
+        </div>
+        <!-- Só em telas pequenas: substitui o cartão da legenda (que não cabe no vão da tabela) -->
+        <div class="visao destaque" id="destaque">
+            <button type="button" class="seletor" id="destaque-botao" aria-haspopup="true" aria-expanded="false" aria-controls="destaque-menu">
+                <span class="seletor-pre">{{tr "Destacar" "Highlight"}}</span><strong id="destaque-rotulo">Todos</strong>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 8 4.5 4.5L14.5 8"/></svg>
+            </button>
+            <div class="visao-menu destaque-menu" id="destaque-menu" hidden></div>
+        </div>
+        <div class="escala-movel" id="escala-movel" hidden></div>
+        <label class="faixa" id="faixa" hidden>
+            <output id="faixa-valor"></output>
+            <input type="range" id="faixa-controle" min="0" max="1000" value="0" {{rot "Valor de corte" "Cutoff value"}}>
+        </label>
+        <button type="button" class="botao" id="visao-redefinir" hidden><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10a6 6 0 1 0 2-4.5M4 3.5v3h3"/></svg>{{tr "Redefinir" "Reset"}}</button>
+        <p class="barra-nota" id="resultado-busca" role="status"></p>
+    </div>
+
+    <div class="rolagem" tabindex="-1">
+        <div class="grade" id="grade">
+            <!-- Painel no vão da tabela: prévia do elemento + cartão da legenda -->
+            <div class="painel">
+                <div class="previa" id="previa" aria-live="polite">
+                    <div class="previa-vazia">
+                        <strong>{{tr "118 elementos" "118 elements"}}</strong>
+                        <span>{{tr "Passe o cursor sobre um elemento para ver um resumo. Clique para abrir a ficha com o modelo 3D do átomo." "Hover over an element to see a summary. Click to open its card with the 3D model of the atom."}}</span>
+                    </div>
+                </div>
+                <div class="legenda" id="legenda" {{rot "Legenda — passe o cursor para destacar" "Legend — hover to highlight"}}>
+                    {{range .Categorias}}<button type="button" class="chip-cat" data-chave="{{.Chave}}" data-cat="{{.Chave}}" data-en="{{.NomeEn}}" aria-pressed="false"><i></i>{{.Nome}}</button>
+                    {{end}}
+                </div>
+            </div>
+
+            {{range .Elementos}}<a class="el" href="#{{.Simbolo}}" data-s="{{.Simbolo}}" data-cat="{{.Categoria}}" style="grid-column:{{.Coluna}};grid-row:{{.Linha}};animation-delay:{{atraso .}}ms" aria-label="{{.Nome}}, número atômico {{.Z}}" data-en-aria-label="{{.NomeEn}}, atomic number {{.Z}}"><span class="el-z">{{.Z}}</span><span class="el-s">{{.Simbolo}}</span><span class="el-n" data-en="{{.NomeEn}}">{{.Nome}}</span><span class="el-m">{{num .Massa 3}}</span></a>
+            {{end}}
+
+            <span class="el el-faixa" data-cat="lantanideo" style="grid-column:3;grid-row:6" aria-hidden="true"><span class="el-s">57–71</span></span>
+            <span class="el el-faixa" data-cat="actinideo" style="grid-column:3;grid-row:7" aria-hidden="true"><span class="el-s">89–103</span></span>
+            <span class="rotulo-serie" style="grid-column:1/3;grid-row:9">{{tr "Lantanídeos" "Lanthanides"}}</span>
+            <span class="rotulo-serie" style="grid-column:1/3;grid-row:10">{{tr "Actinídeos" "Actinides"}}</span>
+        </div>
+    </div>
+</section>
+
+{{template "ficha" .}}
+{{end}}
+
+{{define "ajuda"}}
+<ul class="ajuda-lista pt">
+<li><strong>Menu superior</strong> — troca entre a Tabela, os Íons e as Configurações.</li>
+<li><strong>Lupa</strong> — passe o cursor para abrir a busca. Digite nome, símbolo ou número atômico: a tabela destaca o que corresponde e Enter abre o primeiro resultado.</li>
+<li><strong>PT / EN</strong> — troca o idioma de todo o site entre português e inglês.</li>
+<li><strong>Visualizar por</strong> — muda o critério de cor da tabela. Em <em>Classificação</em>, as cores separam grupos (categoria, bloco, tipo de metal, estado físico). Em <em>Propriedade</em>, a cor vai do claro (menor valor) ao escuro (maior valor).</li>
+<li><strong>Controle deslizante</strong> — aparece em Propriedade e em Estado físico. Em Propriedade, apaga os elementos abaixo do valor escolhido; em Estado físico, define a temperatura.</li>
+<li><strong>Legenda</strong> — o cartão no vão da tabela. Passe o cursor sobre um item para destacar aquele grupo; clique para manter o destaque. Em telas pequenas, ela vira o botão <em>Destacar</em>, logo abaixo de “Visualizar por”.</li>
+<li><strong>Redefinir</strong> — aparece quando há uma visualização, um destaque ou um corte ativo, e devolve a tabela ao estado original.</li>
+<li><strong>Casas da tabela</strong> — número atômico (canto), símbolo, nome e massa atômica. Cada coluna é um grupo; cada linha, um período.</li>
+<li><strong>Resumo</strong> — ao passar o cursor sobre uma casa, o painel ao lado da legenda mostra um resumo do elemento.</li>
+<li><strong>Ficha</strong> — clique em uma casa para abrir a ficha com o modelo 3D do átomo, os orbitais, os íons e as propriedades. A ficha tem a própria ajuda (botão “?”).</li>
+</ul>
+<ul class="ajuda-lista en" lang="en">
+<li><strong>Top menu</strong> — switches between the Table, Ions and Settings.</li>
+<li><strong>Magnifier</strong> — hover to open the search. Type a name, symbol or atomic number: the table highlights the matches and Enter opens the first result.</li>
+<li><strong>PT / EN</strong> — switches the whole site between Portuguese and English.</li>
+<li><strong>View by</strong> — changes how the table is colored. Under <em>Classification</em>, colors separate groups (category, block, metal type, physical state). Under <em>Property</em>, color goes from light (lowest value) to dark (highest value).</li>
+<li><strong>Slider</strong> — appears for Property and Physical state. For a property, it dims the elements below the chosen value; for Physical state, it sets the temperature.</li>
+<li><strong>Legend</strong> — the card in the gap of the table. Hover over an item to highlight that group; click to keep the highlight. On small screens it becomes the <em>Highlight</em> button, right below “View by”.</li>
+<li><strong>Reset</strong> — appears when a view, a highlight or a cutoff is active, and returns the table to its original state.</li>
+<li><strong>Table cells</strong> — atomic number (corner), symbol, name and atomic mass. Each column is a group; each row, a period.</li>
+<li><strong>Summary</strong> — when you hover over a cell, the panel next to the legend shows a summary of the element.</li>
+<li><strong>Card</strong> — click a cell to open the card with the 3D model of the atom, the orbitals, the ions and the properties. The card has its own help (“?” button).</li>
+</ul>
+{{end}}
+
+{{define "scripts"}}<script src="{{est "js/atomo3d.js"}}" defer></script>
+<script src="{{est "js/ficha.js"}}" defer></script>
+<script src="{{est "js/tabela.js"}}" defer></script>{{end}}

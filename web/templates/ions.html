@@ -1,0 +1,53 @@
+{{define "conteudo"}}
+<section class="pagina pagina-estreita">
+    <div class="cabecalho">
+        <h1>{{tr "Íons comuns" "Common ions"}}</h1>
+        <p>{{tr "Um íon é um átomo ou grupo de átomos com carga elétrica: o cátion perdeu elétrons e ficou positivo; o ânion ganhou elétrons e ficou negativo." "An ion is an atom or group of atoms with an electric charge: a cation lost electrons and became positive; an anion gained electrons and became negative."}}</p>
+    </div>
+
+    <div class="pilula filtros" role="group" {{rot "Filtrar íons" "Filter ions"}}>
+        <button type="button" class="filtro" data-classe="todos" aria-pressed="true">{{tr "Todos" "All"}}</button>
+        <button type="button" class="filtro" data-classe="mono" aria-pressed="false">{{tr "Monoatômicos" "Monatomic"}}</button>
+        <button type="button" class="filtro" data-classe="poli" aria-pressed="false">{{tr "Poliatômicos" "Polyatomic"}}</button>
+    </div>
+
+    <div class="ions-colunas">
+        <div>
+            <h2 class="ions-titulo"><span class="sinal sinal-mais">+</span>{{tr "Cátions" "Cations"}} <small>{{len .Cations}}</small></h2>
+            <ul class="ions-lista">{{range .Cations}}{{template "ion" .}}{{end}}</ul>
+        </div>
+        <div>
+            <h2 class="ions-titulo"><span class="sinal sinal-menos">−</span>{{tr "Ânions" "Anions"}} <small>{{len .Anions}}</small></h2>
+            <ul class="ions-lista">{{range .Anions}}{{template "ion" .}}{{end}}</ul>
+        </div>
+    </div>
+</section>
+{{template "ficha" .}}
+{{end}}
+
+{{define "ion"}}<li class="ion" data-classe="{{.Classe}}">{{if eq .Classe "mono"}}<a href="#{{.Formula}}/ions/{{.Carga}}">{{else}}<div>{{end}}<span class="ion-f">{{html .HTML}}</span><span class="ion-n" data-en="{{.NomeEn}}">{{.Nome}}</span><span class="ion-m">{{num .Massa 2}} g/mol</span>{{if eq .Classe "mono"}}</a>{{else}}</div>{{end}}</li>
+{{end}}
+
+{{define "ajuda"}}
+<ul class="ajuda-lista pt">
+<li><strong>Menu superior</strong> — troca entre a Tabela, os Íons e as Configurações.</li>
+<li><strong>Lupa</strong> — passe o cursor para abrir a busca; digite nome, símbolo ou número atômico e escolha um resultado para abrir o elemento.</li>
+<li><strong>PT / EN</strong> — troca o idioma de todo o site entre português e inglês.</li>
+<li><strong>Todos · Monoatômicos · Poliatômicos</strong> — filtra a lista. Monoatômico é o íon de um único átomo (Na⁺); poliatômico é um grupo de átomos com carga (SO₄²⁻).</li>
+<li><strong>Cátions e ânions</strong> — duas colunas, ordenadas da menor para a maior carga.</li>
+<li><strong>Cada cartão</strong> — fórmula com a carga, nome do íon e massa molar em g/mol.</li>
+<li><strong>Clique em um íon monoatômico</strong> — abre a ficha do elemento aqui mesmo, direto na aba Íons, sem sair desta página.</li>
+</ul>
+<ul class="ajuda-lista en" lang="en">
+<li><strong>Top menu</strong> — switches between the Table, Ions and Settings.</li>
+<li><strong>Magnifier</strong> — hover to open the search; type a name, symbol or atomic number and pick a result to open the element.</li>
+<li><strong>PT / EN</strong> — switches the whole site between Portuguese and English.</li>
+<li><strong>All · Monatomic · Polyatomic</strong> — filters the list. A monatomic ion is a single atom (Na⁺); a polyatomic ion is a charged group of atoms (SO₄²⁻).</li>
+<li><strong>Cations and anions</strong> — two columns, sorted from the smallest to the largest charge.</li>
+<li><strong>Each card</strong> — formula with its charge, ion name and molar mass in g/mol.</li>
+<li><strong>Click a monatomic ion</strong> — opens the element's card right here, on the Ions tab, without leaving this page.</li>
+</ul>
+{{end}}
+
+{{define "scripts"}}<script src="{{est "js/atomo3d.js"}}" defer></script>
+<script src="{{est "js/ficha.js"}}" defer></script>{{end}}

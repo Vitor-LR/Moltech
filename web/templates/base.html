@@ -1,0 +1,161 @@
+{{define "base"}}<!DOCTYPE html>
+<html lang="pt-BR" data-titulo-en="{{.TituloEn}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{.Titulo}}</title>
+    <meta name="description" content="Moltech: tabela periódica interativa com os 118 elementos, modelo 3D do átomo, orbitais e íons. Projeto acadêmico em Go.">
+    <!-- Aplica o idioma e as preferências salvas (cartões dos elementos) antes de pintar a página -->
+    <script>(function () {
+        try {
+            var r = document.documentElement;
+            if (localStorage.getItem('moltech-idioma') === 'en') r.lang = 'en';
+            var c = (JSON.parse(localStorage.getItem('moltech-config') || '{}').cartao) || {};
+            if (c.cantos != null) r.style.setProperty('--cz-raio', c.cantos + '%');
+            if (c.borda != null) r.style.setProperty('--cz-borda', c.borda + 'px');
+            if (c.cor != null) r.style.setProperty('--cz-croma', c.cor / 100);
+            if (c.simbolo != null) r.style.setProperty('--cz-simbolo', c.simbolo / 100);
+            if (c.numero === false) r.dataset.semNumero = '';
+            if (c.nome === false) r.dataset.semNome = '';
+            if (c.massa === false) r.dataset.semMassa = '';
+        } catch (e) { }
+    })();</script>
+    <link rel="icon" type="image/svg+xml" href="{{est "img/favicon.svg"}}">
+    <link rel="preload" href="static/fonts/atkinson-next.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{est "css/style.css"}}">
+</head>
+<body data-pagina="{{.Pagina}}">
+
+<header class="topo">
+    <a class="marca" href="index.html" {{rot "Moltech — tabela periódica" "Moltech — periodic table"}}>
+        <!-- Símbolo: três órbitas com elétrons em movimento ao redor do núcleo -->
+        <svg class="orbital" viewBox="-32 -32 64 64" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="2.2">
+                <ellipse rx="28" ry="10.5"/>
+                <ellipse rx="28" ry="10.5" transform="rotate(60)"/>
+                <ellipse rx="28" ry="10.5" transform="rotate(120)"/>
+            </g>
+            <circle class="orbital-nucleo" r="5.2"/>
+            <g class="orbital-eletrons">
+                <circle r="3.3"><animateMotion dur="2.8s" repeatCount="indefinite" path="M-28,0a28,10.5 0 1,0 56,0a28,10.5 0 1,0 -56,0"/></circle>
+                <g transform="rotate(60)"><circle r="3.3"><animateMotion dur="3.6s" begin="-1.2s" repeatCount="indefinite" path="M-28,0a28,10.5 0 1,0 56,0a28,10.5 0 1,0 -56,0"/></circle></g>
+                <g transform="rotate(120)"><circle r="3.3"><animateMotion dur="4.4s" begin="-2.9s" repeatCount="indefinite" path="M-28,0a28,10.5 0 1,0 56,0a28,10.5 0 1,0 -56,0"/></circle></g>
+            </g>
+        </svg>
+        <span class="marca-nome">Moltech</span>
+    </a>
+
+    <nav class="pilula menu" {{rot "Páginas" "Pages"}}>
+        <a href="index.html" {{if eq .Pagina "tabela"}}aria-current="page"{{end}}>{{tr "Tabela" "Table"}}</a>
+        <a href="ions.html" {{if eq .Pagina "ions"}}aria-current="page"{{end}}>{{tr "Íons" "Ions"}}</a>
+        <a href="configuracoes.html" {{if eq .Pagina "config"}}aria-current="page"{{end}}><span class="longo">{{tr "Configurações" "Settings"}}</span><span class="curto" aria-hidden="true">{{tr "Ajustes" "Settings"}}</span></a>
+    </nav>
+
+    <div class="topo-acoes">
+        <!-- Busca recolhida: abre ao passar o cursor ou receber foco -->
+        <div class="busca" id="busca-caixa">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4.5 4.5"/></svg>
+            <input type="search" id="busca" {{dica "Buscar elemento" "Search element"}} autocomplete="off" spellcheck="false"
+                   {{rot "Buscar elemento por nome, símbolo ou número atômico" "Search element by name, symbol or atomic number"}} aria-controls="busca-resultados">
+            <ul class="busca-resultados" id="busca-resultados" hidden></ul>
+        </div>
+        <button class="botao-redondo" id="abrir-ajuda" type="button" {{rot "Ajuda: o que é cada parte desta página" "Help: what each part of this page is"}} {{tit "Ajuda" "Help"}}>?</button>
+        <!-- Idioma: mostra o idioma atual; a sigla rola ao trocar -->
+        <button class="botao-redondo idioma" id="idioma" type="button" {{rot "Mudar idioma para inglês" "Switch language to Portuguese"}} {{tit "Idioma: português" "Language: English"}}>
+            <span class="id-pt" aria-hidden="true">PT</span><span class="id-en" aria-hidden="true">EN</span>
+        </button>
+    </div>
+</header>
+
+<main>
+{{template "conteudo" .}}
+</main>
+
+<!-- Ajuda da página: o que é cada parte -->
+<dialog class="ajuda" id="ajuda" aria-labelledby="ajuda-titulo">
+    <h2 id="ajuda-titulo">{{tr "O que é cada parte desta página" "What each part of this page is"}}</h2>
+    {{template "ajuda" .}}
+    <form method="dialog"><button class="botao botao-escuro">{{tr "Entendi" "Got it"}}</button></form>
+</dialog>
+
+<script type="application/json" id="indice">{{.Indice}}</script>
+<script src="{{est "js/base.js"}}" defer></script>
+{{template "scripts" .}}
+</body>
+</html>
+{{end}}
+
+{{define "ficha"}}
+<!-- ====================== FICHA DO ELEMENTO ======================= -->
+<dialog class="ficha" id="ficha" aria-labelledby="ficha-nome" tabindex="-1">
+    <div class="ficha-info">
+        <header class="ficha-topo">
+            <div class="ficha-numeros"><span id="ficha-a" {{tit "Número de massa (A)" "Mass number (A)"}}></span><span id="ficha-z" {{tit "Número atômico (Z)" "Atomic number (Z)"}}></span></div>
+            <b class="ficha-simbolo" id="ficha-simbolo"></b>
+            <div class="ficha-titulo"><h2 id="ficha-nome"></h2><p id="ficha-sub"></p></div>
+        </header>
+
+        <div class="pilula abas" role="tablist" {{rot "Informações do elemento" "Element information"}}>
+            <button type="button" role="tab" class="aba" id="aba-estrutura" aria-controls="p-estrutura" aria-selected="true">{{tr "Estrutura" "Structure"}}</button>
+            <button type="button" role="tab" class="aba" id="aba-orbitais" aria-controls="p-orbitais" aria-selected="false" tabindex="-1">{{tr "Orbitais" "Orbitals"}}</button>
+            <button type="button" role="tab" class="aba" id="aba-ions" aria-controls="p-ions" aria-selected="false" tabindex="-1">{{tr "Íons" "Ions"}}</button>
+            <button type="button" role="tab" class="aba" id="aba-propriedades" aria-controls="p-propriedades" aria-selected="false" tabindex="-1">{{tr "Propriedades" "Properties"}}</button>
+        </div>
+
+        <div class="paineis">
+            <div class="painel-aba" role="tabpanel" id="p-estrutura" aria-labelledby="aba-estrutura"></div>
+            <div class="painel-aba" role="tabpanel" id="p-orbitais" aria-labelledby="aba-orbitais" hidden></div>
+            <div class="painel-aba" role="tabpanel" id="p-ions" aria-labelledby="aba-ions" hidden></div>
+            <div class="painel-aba" role="tabpanel" id="p-propriedades" aria-labelledby="aba-propriedades" hidden></div>
+        </div>
+
+        <footer class="ficha-rodape">
+            <button type="button" class="botao" id="anterior" {{tit "Elemento anterior (←)" "Previous element (←)"}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg><span></span></button>
+            <button type="button" class="botao" id="proximo" {{tit "Próximo elemento (→)" "Next element (→)"}}><span></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg></button>
+        </footer>
+    </div>
+
+    <div class="ficha-palco">
+        <canvas id="palco" role="img" {{rot "Modelo 3D do átomo. Arraste para girar." "3D model of the atom. Drag to rotate."}}></canvas>
+        <span class="palco-rotulo" id="palco-rotulo"></span>
+        <button type="button" class="botao-redondo palco-fechar" id="fechar" {{rot "Fechar" "Close"}} {{tit "Fechar (Esc)" "Close (Esc)"}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button>
+        <div class="palco-controles">
+            <button type="button" class="botao-redondo" id="pausa" aria-label="Pausar animação" aria-pressed="false"></button>
+            <button type="button" class="botao-redondo" id="vista" {{rot "Voltar à posição inicial" "Reset view"}} {{tit "Voltar à posição inicial" "Reset view"}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10a6 6 0 1 0 2-4.5M4 3.5v3h3"/></svg></button>
+            <button type="button" class="botao-redondo" id="subcamadas" {{rot "Mostrar subcamadas (s, p, d, f)" "Show subshells (s, p, d, f)"}} aria-pressed="false" {{tit "Subcamadas: agrupa os elétrons de cada camada em s, p, d e f" "Subshells: groups each shell's electrons into s, p, d and f"}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 3.5-7 3.5-7-3.5ZM3.5 10 10 13.3l6.5-3.3M3.5 13.4 10 16.7l6.5-3.3"/></svg></button>
+        </div>
+        <div class="palco-legenda" id="palco-legenda" hidden>
+            <span><i style="background:#E5484D"></i>s</span><span><i style="background:#2563EB"></i>p</span><span><i style="background:#E0A100"></i>d</span><span><i style="background:#0E9F6E"></i>f</span>
+        </div>
+        <div class="pilula palco-orbitais" id="palco-orbitais" hidden></div>
+        <button type="button" class="botao-redondo palco-interrogacao" id="ficha-ajuda-botao" {{rot "Ajuda da ficha" "Card help"}} aria-expanded="false" aria-controls="ficha-ajuda">?</button>
+        <div class="palco-ajuda" id="ficha-ajuda" hidden>
+            <h3>{{tr "O que é cada parte da ficha" "What each part of the card is"}}</h3>
+            <ul class="ajuda-lista pt">
+                <li><strong>Topo</strong> — número de massa (em cima), número atômico (embaixo), símbolo e nome.</li>
+                <li><strong>Modelo 3D</strong> — arraste para girar em qualquer direção; a roda do mouse aproxima. Vermelho são prótons, cinza são nêutrons, azul são elétrons e laranja é a camada mais externa.</li>
+                <li><strong>Clique em uma camada</strong> — no modelo ou na lista: ela fica selecionada e o rótulo no alto mostra a camada e quantos elétrons ela tem. Clique fora para desfazer.</li>
+                <li><strong>Estrutura</strong> — prótons, nêutrons, elétrons e quantos elétrons há em cada camada.</li>
+                <li><strong>Orbitais</strong> — configuração eletrônica e diagrama de orbitais. Clique em uma subcamada para ver a forma dos orbitais em 3D; os botões embaixo do modelo mostram todos juntos ou um de cada vez. Orbital vazio aparece apagado.</li>
+                <li><strong>Íons</strong> — íons comuns do elemento. Clique em um íon para ver o modelo com os elétrons a menos ou a mais.</li>
+                <li><strong>Propriedades</strong> — massa, densidade, pontos de fusão e ebulição e outras medidas.</li>
+                <li><strong>Botões do modelo</strong> — pausar a animação, voltar à posição inicial e mostrar as <em>subcamadas</em>: os elétrons de cada camada se agrupam em faixas s (vermelho), p (azul), d (amarelo) e f (verde).</li>
+                <li><strong>Setas ← →</strong> — passam para o elemento anterior ou o próximo; Esc fecha.</li>
+            </ul>
+            <ul class="ajuda-lista en" lang="en">
+                <li><strong>Top</strong> — mass number (above), atomic number (below), symbol and name.</li>
+                <li><strong>3D model</strong> — drag to rotate in any direction; the mouse wheel zooms. Red are protons, gray are neutrons, blue are electrons and orange is the outermost shell.</li>
+                <li><strong>Click a shell</strong> — on the model or in the list: it becomes selected and the label at the top shows the shell and how many electrons it holds. Click elsewhere to undo.</li>
+                <li><strong>Structure</strong> — protons, neutrons, electrons and how many electrons are in each shell.</li>
+                <li><strong>Orbitals</strong> — electron configuration and orbital diagram. Click a subshell to see the shape of its orbitals in 3D; the buttons below the model show them all together or one at a time. Empty orbitals appear dimmed.</li>
+                <li><strong>Ions</strong> — common ions of the element. Click an ion to see the model with fewer or more electrons.</li>
+                <li><strong>Properties</strong> — mass, density, melting and boiling points and other measurements.</li>
+                <li><strong>Model buttons</strong> — pause the animation, reset the view and show the <em>subshells</em>: each shell's electrons are grouped into bands s (red), p (blue), d (yellow) and f (green).</li>
+                <li><strong>Arrow keys ← →</strong> — go to the previous or next element; Esc closes.</li>
+            </ul>
+        </div>
+    </div>
+</dialog>
+
+<script type="application/json" id="dados">{{.Elementos}}</script>
+{{end}}
